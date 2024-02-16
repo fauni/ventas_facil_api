@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "srzLvLcafilzuuVESswetjyGW4b1SGTlv6nHYhFJJpzqlbAHw3jGUvt/AQdSSqW6AnpqEBfQb5lGvuhb2kbrkg==",
+  "success": true,
+  "projectFilePath": "E:\\DESARROLLOS 2024\\VENTAS FACIL\\NetVentas\\Core\\Core.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Franz Aruni\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.25\\microsoft.windowsdesktop.app.ref.6.0.25.nupkg.sha512",
+    "C:\\Users\\Franz Aruni\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.25\\microsoft.netcore.app.ref.6.0.25.nupkg.sha512",
+    "C:\\Users\\Franz Aruni\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.25\\microsoft.aspnetcore.app.ref.6.0.25.nupkg.sha512"
+  ],
+  "logs": []
+}

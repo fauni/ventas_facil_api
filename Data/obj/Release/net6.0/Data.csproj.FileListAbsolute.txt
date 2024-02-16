@@ -1,0 +1,15 @@
+E:\DESARROLLOS 2024\VENTAS FACIL\NetVentas\Data\bin\Release\net6.0\Data.deps.json
+E:\DESARROLLOS 2024\VENTAS FACIL\NetVentas\Data\bin\Release\net6.0\Data.dll
+E:\DESARROLLOS 2024\VENTAS FACIL\NetVentas\Data\bin\Release\net6.0\Data.pdb
+E:\DESARROLLOS 2024\VENTAS FACIL\NetVentas\Data\bin\Release\net6.0\Core.dll
+E:\DESARROLLOS 2024\VENTAS FACIL\NetVentas\Data\bin\Release\net6.0\Core.pdb
+E:\DESARROLLOS 2024\VENTAS FACIL\NetVentas\Data\obj\Release\net6.0\Data.csproj.AssemblyReference.cache
+E:\DESARROLLOS 2024\VENTAS FACIL\NetVentas\Data\obj\Release\net6.0\Data.GeneratedMSBuildEditorConfig.editorconfig
+E:\DESARROLLOS 2024\VENTAS FACIL\NetVentas\Data\obj\Release\net6.0\Data.AssemblyInfoInputs.cache
+E:\DESARROLLOS 2024\VENTAS FACIL\NetVentas\Data\obj\Release\net6.0\Data.AssemblyInfo.cs
+E:\DESARROLLOS 2024\VENTAS FACIL\NetVentas\Data\obj\Release\net6.0\Data.csproj.CoreCompileInputs.cache
+E:\DESARROLLOS 2024\VENTAS FACIL\NetVentas\Data\obj\Release\net6.0\Data.csproj.CopyComplete
+E:\DESARROLLOS 2024\VENTAS FACIL\NetVentas\Data\obj\Release\net6.0\Data.dll
+E:\DESARROLLOS 2024\VENTAS FACIL\NetVentas\Data\obj\Release\net6.0\refint\Data.dll
+E:\DESARROLLOS 2024\VENTAS FACIL\NetVentas\Data\obj\Release\net6.0\Data.pdb
+E:\DESARROLLOS 2024\VENTAS FACIL\NetVentas\Data\obj\Release\net6.0\ref\Data.dll
