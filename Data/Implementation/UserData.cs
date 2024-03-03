@@ -49,6 +49,7 @@ namespace Data.Implementation
                         u.LockoutEnabled = Convert.ToBoolean(item["LockoutEnabled"]);
                         u.AccessFailedCount = Convert.ToInt32(item["AccessFailedCount"]);
                         u.IdCompany = Convert.ToInt32(item["IdCompany"]);
+                        u.IdEmpleadoSap = Convert.ToInt32(item["IdEmpleadoSap"]);
                         u.Imagen = item["Imagen"].ToString();
                         result = u;
                     }

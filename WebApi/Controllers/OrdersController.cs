@@ -3,6 +3,7 @@ using Core.Entities.Ventas;
 using Core.Interfaces;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using WebApi.DTOs.Ventas;
 
 namespace WebApi.Controllers
 {
@@ -21,13 +22,22 @@ namespace WebApi.Controllers
         {
             try
             {
+                List<OrdersDTO> orders = new List<OrdersDTO>();
+
                 var sessionID = Request.Headers["Cookie"];
                 var result = await _repository.GetAll(sessionID);
                 if (result.Error != null)
                 {
                     return StatusCode(result.Error.StatusCode, result.Error);
+                } else
+                {
+                    foreach (var item in result.Result) 
+                    {
+                        OrdersDTO ordersDTO = MapeoOrders.MapToDTO(item);
+                        orders.Add(ordersDTO);
+                    }
                 }
-                return Ok(result.Result);
+                return Ok(orders);
             }
             catch (Exception ex)
             {

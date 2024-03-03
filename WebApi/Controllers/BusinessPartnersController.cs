@@ -29,12 +29,14 @@ namespace WebApi.Controllers
                     return StatusCode(result.Error.StatusCode, result.Error);
                 } else
                 {
+                    
                     List<BusinessPartnersDTO> dto = new List<BusinessPartnersDTO>();
                     foreach (var item in result.Result)
                     {
                         var map = MapeoBusinessPartner.MapToDTO(item);
                         dto.Add(map);
                     }
+                    
                     return Ok(dto);
                 }
             } catch (Exception ex)

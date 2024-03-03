@@ -23,6 +23,7 @@ namespace Core.Entities
         public bool LockoutEnabled { get; set; }
         public int AccessFailedCount { get; set; }
         public int IdCompany { get; set; }
+        public int IdEmpleadoSap { get; set; }
         public string Imagen { get; set; }
     }
 }

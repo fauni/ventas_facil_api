@@ -15,7 +15,7 @@ namespace Core.Entities.SocioNegocio
         public string CardCode { get; set; }
         public string CardName { get; set; }
         public string CardType { get; set; }
-        public long GroupCode { get; set; }
+        public int GroupCode { get; set; }
         public string Address { get; set; }
         public string ZipCode { get; set; }
         public string MailAddress { get; set; }
@@ -25,21 +25,21 @@ namespace Core.Entities.SocioNegocio
         public string Fax { get; set; }
         public string ContactPerson { get; set; }
         public string Notes { get; set; }
-        public double? PayTermsGrpCode { get; set; }
+        public int? PayTermsGrpCode { get; set; }
         public double? CreditLimit { get; set; }
         public double? MaxCommitment { get; set; }
         public double? DiscountPercent { get; set; }
         public string VatLiable { get; set; }
-        public double? FederalTaxId { get; set; }
+        public string FederalTaxId { get; set; }
         public string DeductibleAtSource { get; set; }
         public double? DeductionPercent { get; set; }
         public double? DeductionValidUntil { get; set; }
-        public double? PriceListNum { get; set; }
+        public int? PriceListNum { get; set; }
         public double? IntrestRatePercent { get; set; }
         public double? CommissionPercent { get; set; }
         public double? CommissionGroupCode { get; set; }
         public string FreeText { get; set; }
-        public double? SalesPersonCode { get; set; }
+        public int? SalesPersonCode { get; set; }
         public string Currency { get; set; }
         public string RateDiffAccount { get; set; }
         public string Cellular { get; set; }
@@ -308,8 +308,8 @@ namespace Core.Entities.SocioNegocio
         public string EoriNumber { get; set; }
         public string FceAsPaymentMeans { get; set; }
         public List<string> ElectronicProtocols { get; set; }
-        public List<string> BpAddresses { get; set; }
-        public List<string> ContactEmployees { get; set; }
+        public List<BPAddress> BpAddresses { get; set; }
+        public List<ContactEmployee> ContactEmployees { get; set; }
         public List<string> BpAccountReceivablePaybleCollection { get; set; }
         public List<string> BpPaymentMethods { get; set; }
         public List<string> BpWithholdingTaxCollection { get; set; }

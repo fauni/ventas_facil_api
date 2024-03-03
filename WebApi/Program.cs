@@ -14,10 +14,25 @@ builder.Services.AddScoped<ICompanyData, CompanyData>();
 
 //Socio de Negocio
 builder.Services.AddScoped<IBusinessPartnersRepository, BusinessPartnersRepository>();
+
+//Condiciones de Pago
+builder.Services.AddScoped<IPaymentTermsTypesRepository, PaymentTermsTypesRepository>();
+
+//Contact Employees
+builder.Services.AddScoped<IContactEmployeeRepository, ContactEmployeeRepository>();
+
+//Direccion Cliente
+builder.Services.AddScoped<IBPAdressRepository, BPAdressRepository>();
+
 //Items
 builder.Services.AddScoped<IItemRepository, ItemRepository>();
+//Item Group
+builder.Services.AddScoped<IItemGroupRepository, ItemGroupRepository>();
+
 // Ventas
 builder.Services.AddScoped<IOrderRepository, OrderRepository>();
+// Personal de Ventas
+builder.Services.AddScoped<ISalesPersonsRepository, SalesPersonsRepository>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

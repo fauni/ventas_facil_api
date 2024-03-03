@@ -299,7 +299,7 @@
 
     public partial class ItemPrice
     {
-        public double? PriceList { get; set; }
+        public int? PriceList { get; set; }
         public double? Price { get; set; }
         public string Currency { get; set; }
         public double? AdditionalPrice1 { get; set; }

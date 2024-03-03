@@ -1,8 +1,3 @@
-E:\DESARROLLOS 2024\VENTAS FACIL\NetVentas\BusinessLogic\obj\Debug\net6.0\BusinessLogic.csproj.AssemblyReference.cache
-E:\DESARROLLOS 2024\VENTAS FACIL\NetVentas\BusinessLogic\obj\Debug\net6.0\BusinessLogic.GeneratedMSBuildEditorConfig.editorconfig
-E:\DESARROLLOS 2024\VENTAS FACIL\NetVentas\BusinessLogic\obj\Debug\net6.0\BusinessLogic.AssemblyInfoInputs.cache
-E:\DESARROLLOS 2024\VENTAS FACIL\NetVentas\BusinessLogic\obj\Debug\net6.0\BusinessLogic.AssemblyInfo.cs
-E:\DESARROLLOS 2024\VENTAS FACIL\NetVentas\BusinessLogic\obj\Debug\net6.0\BusinessLogic.csproj.CoreCompileInputs.cache
 E:\DESARROLLOS 2024\VENTAS FACIL\NetVentas\BusinessLogic\bin\Debug\net6.0\BusinessLogic.deps.json
 E:\DESARROLLOS 2024\VENTAS FACIL\NetVentas\BusinessLogic\bin\Debug\net6.0\BusinessLogic.dll
 E:\DESARROLLOS 2024\VENTAS FACIL\NetVentas\BusinessLogic\bin\Debug\net6.0\BusinessLogic.pdb
@@ -10,6 +5,12 @@ E:\DESARROLLOS 2024\VENTAS FACIL\NetVentas\BusinessLogic\bin\Debug\net6.0\Core.d
 E:\DESARROLLOS 2024\VENTAS FACIL\NetVentas\BusinessLogic\bin\Debug\net6.0\Data.dll
 E:\DESARROLLOS 2024\VENTAS FACIL\NetVentas\BusinessLogic\bin\Debug\net6.0\Core.pdb
 E:\DESARROLLOS 2024\VENTAS FACIL\NetVentas\BusinessLogic\bin\Debug\net6.0\Data.pdb
+E:\DESARROLLOS 2024\VENTAS FACIL\NetVentas\BusinessLogic\obj\Debug\net6.0\BusinessLogic.csproj.AssemblyReference.cache
+E:\DESARROLLOS 2024\VENTAS FACIL\NetVentas\BusinessLogic\obj\Debug\net6.0\BusinessLogic.GeneratedMSBuildEditorConfig.editorconfig
+E:\DESARROLLOS 2024\VENTAS FACIL\NetVentas\BusinessLogic\obj\Debug\net6.0\BusinessLogic.AssemblyInfoInputs.cache
+E:\DESARROLLOS 2024\VENTAS FACIL\NetVentas\BusinessLogic\obj\Debug\net6.0\BusinessLogic.AssemblyInfo.cs
+E:\DESARROLLOS 2024\VENTAS FACIL\NetVentas\BusinessLogic\obj\Debug\net6.0\BusinessLogic.csproj.CoreCompileInputs.cache
+E:\DESARROLLOS 2024\VENTAS FACIL\NetVentas\BusinessLogic\obj\Debug\net6.0\BusinessLogic.sourcelink.json
 E:\DESARROLLOS 2024\VENTAS FACIL\NetVentas\BusinessLogic\obj\Debug\net6.0\BusinessLogic.csproj.CopyComplete
 E:\DESARROLLOS 2024\VENTAS FACIL\NetVentas\BusinessLogic\obj\Debug\net6.0\BusinessLogic.dll
 E:\DESARROLLOS 2024\VENTAS FACIL\NetVentas\BusinessLogic\obj\Debug\net6.0\refint\BusinessLogic.dll

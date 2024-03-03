@@ -53,3 +53,4 @@ E:\DESARROLLOS 2024\VENTAS FACIL\NetVentas\WebApi\obj\Release\net6.0\refint\WebA
 E:\DESARROLLOS 2024\VENTAS FACIL\NetVentas\WebApi\obj\Release\net6.0\WebApi.pdb
 E:\DESARROLLOS 2024\VENTAS FACIL\NetVentas\WebApi\obj\Release\net6.0\WebApi.genruntimeconfig.cache
 E:\DESARROLLOS 2024\VENTAS FACIL\NetVentas\WebApi\obj\Release\net6.0\ref\WebApi.dll
+E:\DESARROLLOS 2024\VENTAS FACIL\NetVentas\WebApi\obj\Release\net6.0\WebApi.sourcelink.json

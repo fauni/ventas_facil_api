@@ -3,6 +3,7 @@ using Core.Interfaces;
 
 using Microsoft.AspNetCore.Mvc;
 using WebApi.DTOs;
+using WebApi.DTOs.Items;
 
 namespace WebApi.Controllers
 {
@@ -11,9 +12,11 @@ namespace WebApi.Controllers
     public class ItemsController : ControllerBase
     {
         private readonly IItemRepository _itemRepository;
-        public ItemsController(IItemRepository itemRepository)
+        private readonly IItemGroupRepository _itemGroupRepository;
+        public ItemsController(IItemRepository itemRepository, IItemGroupRepository itemGroupRepository)
         {
             _itemRepository = itemRepository;
+            _itemGroupRepository = itemGroupRepository;
         }
 
         [HttpGet]
@@ -29,12 +32,15 @@ namespace WebApi.Controllers
                 }
                 else
                 {
+                    
                     List<ItemDTO> dto = new List<ItemDTO>();
                     foreach (var item in result.Result)
                     {
-                        var map = MapeoItem.MapToDTO(item);
+                        var resultGrupo = await _itemGroupRepository.GetPorNumero(sessionID, (int)item.ItemsGroupCode);
+                        var map = MapeoItem.MapToDTO(item, MapeoItemGroup.MapToDTO(resultGrupo.Result));
                         dto.Add(map);
                     }
+                    
                     return Ok(dto);
                 }
 
