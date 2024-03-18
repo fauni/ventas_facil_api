@@ -11,6 +11,6 @@ namespace Core.Interfaces
     public interface ISalesPersonsRepository
     {
         Task<(List<SalesPersons> Result, CodeErrorException Error)> GetAll(String sessionID);
-        Task<(SalesPersons Result, CodeErrorException Error)> GetById(String sessionID, int id);
+        Task<(SalesPersons Result, CodeErrorException Error)> GetById(String sessionID, int? id);
     }
 }

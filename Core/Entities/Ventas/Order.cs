@@ -13,8 +13,8 @@ namespace Core.Entities.Ventas
     }
     public class Order
     {
-        public double? DocEntry { get; set; }
-        public double? DocNum { get; set; }
+        public int? DocEntry { get; set; }
+        public int? DocNum { get; set; }
         public string DocType { get; set; }
         public string HandWritten { get; set; }
         public string Printed { get; set; }
@@ -34,12 +34,12 @@ namespace Core.Entities.Ventas
         public string JournalMemo { get; set; }
         public double? PaymentGroupCode { get; set; }
         public DateTimeOffset? DocTime { get; set; }
-        public double? SalesPersonCode { get; set; }
+        public int? SalesPersonCode { get; set; }
         public double? TransportationCode { get; set; }
         public string Confirmed { get; set; }
         public string ImportFileNum { get; set; }
         public string SummeryType { get; set; }
-        public string ContactPersonCode { get; set; }
+        public int? ContactPersonCode { get; set; }
         public string ShowScn { get; set; }
         public double? Series { get; set; }
         public DateTimeOffset? TaxDate { get; set; }
@@ -47,7 +47,7 @@ namespace Core.Entities.Ventas
         public string DocstringCode { get; set; }
         public string ShipToCode { get; set; }
         public string Indicator { get; set; }
-        public double? FederalTaxId { get; set; }
+        public string FederalTaxId { get; set; }
         public double? DiscountPercent { get; set; }
         public string PaymentReference { get; set; }
         public DateTimeOffset? CreationDate { get; set; }
@@ -266,7 +266,7 @@ namespace Core.Entities.Ventas
         public List<string> WithholdingTaxDataCollection { get; set; }
         public List<string> DocumentSpecialLines { get; set; }
         public TaxExtension TaxExtension { get; set; }
-        public Dictionary<string, double?> AddressExtension { get; set; }
+        public Dictionary<string, string> AddressExtension { get; set; }
         public List<string> DocumentReferences { get; set; }
     }
 

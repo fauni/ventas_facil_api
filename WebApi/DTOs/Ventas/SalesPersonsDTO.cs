@@ -4,7 +4,7 @@ namespace WebApi.DTOs.Ventas
 {
     public class SalesPersonsDTO
     {
-        public double? CodigoEmpleado { get; set; }
+        public int? CodigoEmpleado { get; set; }
         public string NombreEmpleado { get; set; }
         public string Observaciones { get; set; }
         public string Email { get; set; }

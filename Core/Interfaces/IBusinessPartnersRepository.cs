@@ -11,5 +11,6 @@ namespace Core.Interfaces
     public interface IBusinessPartnersRepository
     {
         Task<(List<BusinessPartners> Result, CodeErrorException Error)> GetAll(String sessionID);
+        Task<(BusinessPartners Result, CodeErrorException Error)> GetByCodigo(String sessionID, string codigo);
     }
 }

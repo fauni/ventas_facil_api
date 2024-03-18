@@ -7,7 +7,7 @@ namespace Core.Entities.Ventas
     }
     public class SalesPersons
     {
-        public double? SalesEmployeeCode { get; set; }
+        public int? SalesEmployeeCode { get; set; }
         public string SalesEmployeeName { get; set; }
         public string Remarks { get; set; }
         public double? CommissionForSalesEmployee { get; set; }

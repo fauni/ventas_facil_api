@@ -310,8 +310,8 @@ namespace Core.Entities.SocioNegocio
         public List<string> ElectronicProtocols { get; set; }
         public List<BPAddress> BpAddresses { get; set; }
         public List<ContactEmployee> ContactEmployees { get; set; }
-        public List<string> BpAccountReceivablePaybleCollection { get; set; }
-        public List<string> BpPaymentMethods { get; set; }
+        // public List<string> BpAccountReceivablePaybleCollection { get; set; }
+        // public List<string> BpPaymentMethods { get; set; }
         public List<string> BpWithholdingTaxCollection { get; set; }
         public List<string> BpPaymentDates { get; set; }
         public List<string> BpBranchAssignment { get; set; }

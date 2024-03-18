@@ -48,7 +48,7 @@ namespace BusinessLogic.Logic
             }
         }
 
-        public async Task<(SalesPersons Result, CodeErrorException Error)> GetById(string sessionID, int id)
+        public async Task<(SalesPersons Result, CodeErrorException Error)> GetById(string sessionID, int? id)
         {
             string url = _configuration["UrlSap"] + $"/SalesPersons({id})";
             try
