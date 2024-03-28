@@ -14,7 +14,7 @@ namespace Core.Entities.Ventas
     public class Order
     {
         public int? DocEntry { get; set; }
-        public int? DocNum { get; set; }
+        public long? DocNum { get; set; }
         public string DocType { get; set; }
         public string HandWritten { get; set; }
         public string Printed { get; set; }
@@ -258,6 +258,11 @@ namespace Core.Entities.Ventas
         public string LastPageFolioNumber { get; set; }
         public string InventoryStatus { get; set; }
         public string PlasticPackagingTaxRelevant { get; set; }
+        public string U_usrventafacil { get; set; }
+        public string U_latitud { get; set; }
+        public string U_longitud { get; set; }
+        public DateTimeOffset? U_fecharegistroapp { get; set; }
+        public DateTimeOffset? U_horaregistroapp { get; set; }
         public List<string> DocumentApprovalRequests { get; set; }
         public List<DocumentLineOrder> DocumentLines { get; set; }
         public List<string> ElectronicProtocols { get; set; }
@@ -483,6 +488,8 @@ namespace Core.Entities.Ventas
         public string UnencumberedReason { get; set; }
         public string CuSplit { get; set; }
         public double? ListNum { get; set; }
+        public string U_descitemfacil { get; set; }
+        public double? U_PrecioVenta { get; set; }
         public List<LineTaxJurisdiction> LineTaxJurisdictions { get; set; }
         public List<string> DocumentLineAdditionalExpenses { get; set; }
         public List<string> WithholdingTaxLines { get; set; }

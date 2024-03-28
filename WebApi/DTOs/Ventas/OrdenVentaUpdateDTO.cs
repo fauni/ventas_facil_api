@@ -1,4 +1,5 @@
-﻿using Core.Entities.Ventas;
+﻿using Core.Entities.Producto;
+using Core.Entities.Ventas;
 
 namespace WebApi.DTOs.Ventas
 {
@@ -16,6 +17,7 @@ namespace WebApi.DTOs.Ventas
         public string Observacion { get; set; }
         public DateTimeOffset? FechaRegistro { get; set; }
         public string Estado { get; set; }
+        public string EstadoCancelado { get; set; }
         public string IdCliente { get; set; }
         public string NombreCliente { get; set; }
         public BusinessPartnersDTO Cliente { get; set; }
@@ -65,8 +67,10 @@ namespace WebApi.DTOs.Ventas
     {
         public string Codigo { get; set; }
         public string Descripcion { get; set; }
+        public string DescripcionAdicional { get; set; }
         public double? Cantidad { get; set; }
-        public double? Precio { get; set; }
+        public double? PrecioPorUnidad { get; set; }
+        public double? Descuento { get; set; }
         public string IndicadorDeImpuestos { get; set; }
     }
 
@@ -74,13 +78,17 @@ namespace WebApi.DTOs.Ventas
     {
         public static DocumentLineModificarOrder DTOToMap(LinesPedidoActualizarDTO dto)
         {
-            return new DocumentLineModificarOrder()
-            {
-                ItemCode = dto.Codigo,
-                Quantity = dto.Cantidad,
-                TaxCode = "IVA",
-                UnitPrice = dto.Precio
-            };
+            DocumentLineModificarOrder line = new DocumentLineModificarOrder();
+            line.ItemCode = dto.Codigo;
+            line.U_descitemfacil = dto.DescripcionAdicional;
+            line.Quantity = dto.Cantidad;
+            line.TaxCode = "IVA";
+            line.UnitPrice = dto.PrecioPorUnidad - (13 * dto.PrecioPorUnidad / 100);
+            line.PriceAfterVAT = dto.PrecioPorUnidad - (dto.Descuento / 100 * dto.PrecioPorUnidad);
+            line.U_PrecioVenta = dto.PrecioPorUnidad;
+            line.DiscountPercent = dto.Descuento;
+            line.Volume = dto.PrecioPorUnidad;
+            return line;
         }
     }
 }

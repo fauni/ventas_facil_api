@@ -25,5 +25,10 @@ namespace Core.Entities.Ventas
         public double? Quantity { get; set; }
         public string TaxCode { get; set; }
         public double? UnitPrice { get; set; }
+        public double? PriceAfterVAT { get; set; }
+        public double? DiscountPercent { get; set; }
+        public string U_descitemfacil { get; set; }
+        public double? U_PrecioVenta { get; set; }
+        public double? Volume { get; set; }
     }
 }

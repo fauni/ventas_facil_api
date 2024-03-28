@@ -281,21 +281,73 @@
         public string CommodityClassification { get; set; }
         public List<ItemPrice> ItemPrices { get; set; }
         public List<ItemWarehouseInfoCollection> ItemWarehouseInfoCollection { get; set; }
-        public List<string> ItemPreferredVendors { get; set; }
+        public List<ItemPreferredVendor> ItemPreferredVendors { get; set; }
         public List<string> ItemLocalizationInfos { get; set; }
         public List<string> ItemProjects { get; set; }
         public List<string> ItemDistributionRules { get; set; }
         public List<string> ItemAttributeGroups { get; set; }
         public List<string> ItemDepreciationParameters { get; set; }
         public List<string> ItemPeriodControls { get; set; }
-        public List<string> ItemUnitOfMeasurementCollection { get; set; }
+        public List<ItemUnitOfMeasurementCollection> ItemUnitOfMeasurementCollection { get; set; }
         public List<string> ItemBarCodeCollection { get; set; }
         public ItemIntrastatExtension ItemIntrastatExtension { get; set; }
     }
 
+    public partial class ItemUnitOfMeasurementCollection
+    {
+        public string UoMType { get; set; }
+        public double? UoMEntry { get; set; }
+        public double? DefaultBarcode { get; set; }
+        public string DefaultPackage { get; set; }
+        public double? Length1 { get; set; }
+        public string Length1Unit { get; set; }
+        public double? Length2 { get; set; }
+        public string Length2Unit { get; set; }
+        public double? Width1 { get; set; }
+        public string Width1Unit { get; set; }
+        public double? Width2 { get; set; }
+        public string Width2Unit { get; set; }
+        public double? Height1 { get; set; }
+        public string Height1Unit { get; set; }
+        public double? Height2 { get; set; }
+        public string Height2Unit { get; set; }
+        public double? Volume { get; set; }
+        public double? VolumeUnit { get; set; }
+        public double? Weight1 { get; set; }
+        public string Weight1Unit { get; set; }
+        public double? Weight2 { get; set; }
+        public string Weight2Unit { get; set; }
+        public List<string> ItemUoMPackageCollection { get; set; }
+    }
     public partial class ItemIntrastatExtension
     {
+        public string ItemCode { get; set; }
+        public string CommodityCode { get; set; }
+        public string SupplementaryUnit { get; set; }
+        public string? FactorOfSupplementaryUnit { get; set; }
+        public string ImportRegionState { get; set; }
+        public string ExportRegionState { get; set; }
+        public string ImportNatureOfTransaction { get; set; }
+        public string ExportNatureOfTransaction { get; set; }
+        public string ImportStatisticalProcedure { get; set; }
+        public string ExportStatisticalProcedure { get; set; }
+        public string CountryOfOrigin { get; set; }
+        public string ServiceCode { get; set; }
+        public string Type { get; set; }
+        public string ServiceSupplyMethod { get; set; }
+        public string ServicePaymentMethod { get; set; }
+        public string ImportRegionCountry { get; set; }
+        public string ExportRegionCountry { get; set; }
+        public string UseWeightInCalculation { get; set; }
+        public string IntrastatRelevant { get; set; }
+        public string StatisticalCode { get; set; }
     }
+
+    public partial class ItemPreferredVendor
+    {
+        public string BpCode { get; set; }
+    }
+
 
     public partial class ItemPrice
     {
@@ -311,7 +363,7 @@
         public List<string> UoMPrices { get; set; }
     }
 
-    public partial class ItemWarehouseInfoCollection
+    public class ItemWarehouseInfoCollection
     {
         public double? MinimalStock { get; set; }
         public double? MaximalStock { get; set; }
@@ -379,4 +431,10 @@
         public string CnjpMan { get; set; }
         public List<string> ItemCycleCounts { get; set; }
     }
+
+    public enum AssetItem { TNo };
+
+    public enum ForceSelectionOfSerialNumber { TYes };
+
+    public enum ItemCode { The01E001 };
 }

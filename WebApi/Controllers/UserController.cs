@@ -4,6 +4,7 @@ using Core.Entities;
 using Core.Interfaces;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 
 namespace WebApi.Controllers
 {
@@ -26,17 +27,21 @@ namespace WebApi.Controllers
         {
             CodeErrorException error = null;
             var usuario = _userRepository.Login(user.UserName, user.PasswordHash, user.IdCompany, out error);
+
             var company = _companyRepository.GetCompanyByIdAsync(user.IdCompany);
             var resultSap = await _userRepository.AuthenticatedUserSap(new LoginRequestModel { CompanyDB = company.CompanyDB, UserName = company.UserName, Password = company.Password });
+            
             try
             {
-                if (error != null && !resultSap.isCorrect)
+                if (error != null || !resultSap.isCorrect)
                 {
                     return StatusCode(error.StatusCode, error);
                 }
                 else
                 {
                     usuario.ApiToken = resultSap.SessionId;
+                    // usuario.Imagen = JsonConvert.SerializeObject(resultSap); // TODO: Eliminar esta linea
+
                     return Ok(usuario);
                 }
             }
@@ -44,7 +49,6 @@ namespace WebApi.Controllers
             {
                 return StatusCode(500, $"Error interno: {ex.Message}");
             }
-
         }
     }
 }

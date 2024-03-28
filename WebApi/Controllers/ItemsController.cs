@@ -1,6 +1,6 @@
 ﻿using Core.Entities.Errors;
 using Core.Interfaces;
-
+using Data.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using WebApi.DTOs;
 using WebApi.DTOs.Items;
@@ -13,10 +13,12 @@ namespace WebApi.Controllers
     {
         private readonly IItemRepository _itemRepository;
         private readonly IItemGroupRepository _itemGroupRepository;
-        public ItemsController(IItemRepository itemRepository, IItemGroupRepository itemGroupRepository)
+        private readonly IItemData _itemData;
+        public ItemsController(IItemRepository itemRepository, IItemGroupRepository itemGroupRepository, IItemData itemData)
         {
             _itemRepository = itemRepository;
             _itemGroupRepository = itemGroupRepository;
+            _itemData = itemData;
         }
 
         [HttpGet]
@@ -32,12 +34,13 @@ namespace WebApi.Controllers
                 }
                 else
                 {
-                    
                     List<ItemDTO> dto = new List<ItemDTO>();
                     foreach (var item in result.Result)
                     {
+                        var infoItemLote = _itemData.GetLotesPorItem(item);
                         var resultGrupo = await _itemGroupRepository.GetPorNumero(sessionID, (int)item.ItemsGroupCode);
                         var map = MapeoItem.MapToDTO(item, MapeoItemGroup.MapToDTO(resultGrupo.Result));
+                        map.InformacionItemLote = infoItemLote;
                         dto.Add(map);
                     }
                     

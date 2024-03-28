@@ -55,7 +55,9 @@ namespace Data.Implementation
                     }
                     else
                     {
-                        throw new Exception("No tienes autorización para acceder al sistema");
+                        var codeError = new CodeErrorException(401, message: consulta.Error);
+                        Error = codeError;
+                        return result;
                     }
                 }
                 else

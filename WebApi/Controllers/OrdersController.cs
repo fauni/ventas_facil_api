@@ -1,5 +1,6 @@
 ﻿using Core.Entities.Errors;
 using Core.Entities.Producto;
+using Core.Entities.SocioNegocio;
 using Core.Entities.Ventas;
 using Core.Interfaces;
 using Microsoft.AspNetCore.Http;
@@ -121,13 +122,35 @@ namespace WebApi.Controllers
             {
                 var sessionID = Request.Headers["Cookie"];
                 OrderGuardar order = MapeoGuardarOrdenVenta.DTOToMap(data);
+                
 
                 var result = await _repository.SaveOrder(sessionID, order);
                 if (result.Error != null)
                 {
+                    if (result.Error.StatusCode == 401)
+                    {
+                        return StatusCode(401, new CodeErrorException(401));
+                    }
                     return StatusCode(result.Error.StatusCode, result.Error);
                 }
-                return Ok(result.Result);
+                var resultBP = await _businessPartnersRepository.GetByCodigo(sessionID, result.Result.CardCode);
+                var resultSP = await _salesPersonsRepository.GetById(sessionID, result.Result.SalesPersonCode);
+                var resultContacto = await _contactEmployeeRepository.GetAll(sessionID);
+
+                EmpleadoContactoDTO contactoDTO = new EmpleadoContactoDTO();
+                foreach (var contacto in resultContacto.Result)
+                {
+                    if (contacto.InternalCode == result.Result.ContactPersonCode)
+                    {
+                        contactoDTO = MapeoEmpleadoContacto.MapToDTO(contacto);
+                    }
+                }
+                
+                OrdenVentaDTO ordenVentaDTO = MapeoGuardarOrdenVenta.MapToDTO(result.Result);
+                ordenVentaDTO.Cliente = MapeoBusinessPartner.MapToDTO(resultBP.Result);
+                ordenVentaDTO.Empleado = MapeoSalesPerson.MapToDTO(resultSP.Result);
+                ordenVentaDTO.Contacto = String.IsNullOrEmpty(contactoDTO.CodigoCliente) ? null : contactoDTO;
+                return Ok(ordenVentaDTO);
             }
             catch (Exception ex)
             {

@@ -1,4 +1,5 @@
-﻿using Core.Entities.Ventas;
+﻿using Core.Entities.Producto;
+using Core.Entities.Ventas;
 using System.Reflection.Metadata.Ecma335;
 using WebApi.DTOs.SocioNegocio;
 
@@ -18,6 +19,7 @@ namespace WebApi.DTOs.Ventas
         public string Observacion { get; set; }
         public DateTimeOffset? FechaRegistro { get; set; }
         public string Estado { get; set; }
+        public string EstadoCancelado { get; set; }
         public string IdCliente { get; set; }
         public string NombreCliente { get; set; }
         public BusinessPartnersDTO Cliente { get; set; }
@@ -26,18 +28,55 @@ namespace WebApi.DTOs.Ventas
         public SalesPersonsDTO Empleado { get; set; }
         public string Moneda { get; set; }
         public int? PersonaContacto { get; set; }
+        public EmpleadoContactoDTO Contacto { get; set; }
         public List<LinesPedidoDTO> LinesPedido { get; set; }
-        public string Ubicacion { get; set; }
+        public string UsuarioVentaFacil { get; set; }
+        public string Latitud { get; set; }
+        public string Longitud { get; set; }
+        public DateTimeOffset? FechaRegistroApp { get; set; }
+        public DateTimeOffset? HoraRegistroApp { get; set; }
     }
 
     public class MapeoGuardarOrdenVenta
     {
         public static OrdenVentaDTO MapToDTO(Order order)
         {
+            List<LinesPedidoDTO> lines = new List<LinesPedidoDTO>();
+            foreach (var item in order.DocumentLines)
+            {
+                lines.Add(MapeoLinesOrdenVenta.MapToDTO(item));
+            }
             // TODO: Completar este codigo
             return new OrdenVentaDTO()
             {
-                
+                Id = order.DocEntry,
+                CodigoSap = order.DocEntry,
+                NombreFactura = order.Indicator,
+                NitFactura = order.FederalTaxId,
+                DiasPlazo = 0,
+                FechaEntrega = order.DocDueDate,
+                Total = order.DocTotal,
+                TipoCambio = 0,
+                Descuento = order.TotalDiscount,
+                Observacion = order.Comments,
+                FechaRegistro = order.DocDate,
+                Estado = order.DocumentStatus,
+                EstadoCancelado = order.CancelStatus,
+                IdCliente = order.CardCode,
+                NombreCliente = order.CardName,
+                Cliente = new BusinessPartnersDTO(),
+                IdEmpleado = order.SalesPersonCode,
+                NombreEmpleado = "",
+                Empleado = new SalesPersonsDTO(),
+                Moneda = order.DocCurrency,
+                PersonaContacto = order.ContactPersonCode,
+                Contacto = new EmpleadoContactoDTO(),
+                LinesPedido = lines,
+                UsuarioVentaFacil = order.U_usrventafacil,
+                Latitud = order.U_latitud,
+                Longitud = order.U_longitud,
+                FechaRegistroApp = order.U_fecharegistroapp,
+                HoraRegistroApp = order.U_horaregistroapp
             };
         }
 
@@ -58,7 +97,11 @@ namespace WebApi.DTOs.Ventas
                 ContactPersonCode = dto.PersonaContacto,
                 Comments = dto.Observacion,
                 DocumentLines = lines,
-                PickRemark = dto.Ubicacion
+                U_usrventafacil= dto.UsuarioVentaFacil,
+                U_latitud = dto.Latitud,
+                U_longitud = dto.Longitud,
+                U_fecharegistroapp = dto.FechaRegistroApp,
+                U_horaregistroapp = dto.HoraRegistroApp
             };
         }
     }
@@ -67,22 +110,40 @@ namespace WebApi.DTOs.Ventas
     {
         public string Codigo { get; set; }
         public string Descripcion { get; set; }
+        public string DescripcionAdicional { get; set; }
         public double? Cantidad { get; set; }
-        public double? Precio { get; set; }
+        public double? PrecioPorUnidad { get; set; }
+        public double? Descuento { get; set; }
         public string IndicadorDeImpuestos { get; set; }
     }
 
     public class MapeoLinesOrdenVenta
     {
+        public static LinesPedidoDTO MapToDTO(DocumentLineOrder data)
+        {
+            return new LinesPedidoDTO()
+            {
+                Codigo = data.ItemCode,
+                Descripcion = data.ItemDescription,
+                DescripcionAdicional = data.U_descitemfacil,
+                Cantidad = data.Quantity,
+                PrecioPorUnidad = data.PriceAfterVat,
+                Descuento = data.DiscountPercent,
+                IndicadorDeImpuestos = "IVA",
+            };
+        }
         public static DocumentLineGuardarOrder DTOToMap(LinesPedidoDTO dto)
         {
-            return new DocumentLineGuardarOrder()
-            {
-                ItemCode = dto.Codigo,
-                Quantity = dto.Cantidad,
-                TaxCode = "IVA",
-                UnitPrice = dto.Precio
-            };
+            DocumentLineGuardarOrder line = new DocumentLineGuardarOrder();
+            line.ItemCode = dto.Codigo;
+            line.U_descitemfacil = dto.DescripcionAdicional;
+            line.Quantity = dto.Cantidad;
+            line.TaxCode = "IVA";
+            line.UnitPrice = dto.PrecioPorUnidad - (13 * dto.PrecioPorUnidad / 100);
+            line.PriceAfterVAT = dto.PrecioPorUnidad - (dto.Descuento / 100 * dto.PrecioPorUnidad);
+            line.U_PrecioVenta = dto.PrecioPorUnidad;
+            line.DiscountPercent = dto.Descuento;
+            return line;
         }
     }
 }

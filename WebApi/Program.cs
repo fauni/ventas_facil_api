@@ -11,6 +11,7 @@ builder.Services.AddScoped<IUserData, UserData>();
 
 builder.Services.AddScoped<ICompanyRepository, CompanyRepository>();
 builder.Services.AddScoped<ICompanyData, CompanyData>();
+builder.Services.AddScoped<IItemData, ItemData>();
 
 //Socio de Negocio
 builder.Services.AddScoped<IBusinessPartnersRepository, BusinessPartnersRepository>();

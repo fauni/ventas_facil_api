@@ -16,7 +16,11 @@ namespace WebApi.DTOs
         public string EsGestionadoNumeroLote { get; set; }
         public string UnidadMedidaVenta { get; set; }
         public string UnidadMedidaInventario { get; set; }
+
+        public double? CantidadEnStock { get; set; }
         public List<PrecioItemDTO> ListaPrecios { get; set; }
+        public List<ItemAlmacenDTO> InformacionItemAlmacen { get; set; }
+        public List<ItemLote> InformacionItemLote { get; set; }
     }
 
     public class MapeoItem
@@ -27,6 +31,11 @@ namespace WebApi.DTOs
             foreach (var precio in item.ItemPrices)
             {
                 precios.Add(MapeoPrecioItem.MapToDTO(precio));
+            }
+            List<ItemAlmacenDTO> almacenes = new List<ItemAlmacenDTO>();
+            foreach (var whs in item.ItemWarehouseInfoCollection)
+            {
+                almacenes.Add(MapeoItemAlmacen.MapToDTO(whs));
             }
             return new ItemDTO()
             {
@@ -40,7 +49,10 @@ namespace WebApi.DTOs
                 EsGestionadoNumeroLote = item.ManageBatchNumbers,
                 UnidadMedidaVenta = item.SalesUnit,
                 UnidadMedidaInventario = item.InventoryUom,
-                ListaPrecios = precios
+                CantidadEnStock = item.QuantityOnStock,
+                ListaPrecios = precios,
+                InformacionItemAlmacen = almacenes,
+                InformacionItemLote = new List<ItemLote>()
             };
         }
     }

@@ -21,7 +21,7 @@ namespace Core.Entities.SocioNegocio
         public string Remarks1 { get; set; }
         public string Remarks2 { get; set; }
         public string Password { get; set; }
-        public long? InternalCode { get; set; }
+        public int? InternalCode { get; set; }
         public long? PlaceOfBirth { get; set; }
         public string DateOfBirth { get; set; }
         public string Gender { get; set; }
