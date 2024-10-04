@@ -17,6 +17,7 @@ namespace WebApi.DTOs.Ventas
         public BusinessPartnersDTO Cliente { get; set; }
         public int? CodigoPersonaDeContacto { get; set; }
         public EmpleadoContactoDTO Contacto { get; set; }
+        public int? IdCondicionDePago { get; set; }
         public string Moneda { get; set; }
         public string Comentarios { get; set; }
         public int? CodigoEmpleadoDeVentas { get; set; }
@@ -43,6 +44,7 @@ namespace WebApi.DTOs.Ventas
 
     public class LinesOrdersDTO
     {
+        public int? NumeroDeLinea { get; set; }
         public string Codigo { get; set; }
         public string Descripcion { get; set; }
         public string DescripcionAdicional { get; set; }
@@ -54,7 +56,9 @@ namespace WebApi.DTOs.Ventas
         public double? TotalLinea { get; set; }
         public string CodigoDeAlmacen { get; set; }
         public string UnidadDeMedida { get; set; }
+        public int? CodigoUnidadMedida { get; set; }
         public string EstadoLinea { get; set; }
+        public DateTimeOffset? FechaDeEntrega { get; set; }
     }
     public class MapeoOrderDTO
     {
@@ -76,6 +80,7 @@ namespace WebApi.DTOs.Ventas
                 Cliente = new BusinessPartnersDTO(),
                 CodigoPersonaDeContacto = data.ContactPersonCode,
                 Contacto = new EmpleadoContactoDTO(),
+                IdCondicionDePago = data.PaymentGroupCode,
                 Moneda = data.DocCurrency,
                 Comentarios = data.Comments,
                 CodigoEmpleadoDeVentas = data.SalesPersonCode,
@@ -102,21 +107,23 @@ namespace WebApi.DTOs.Ventas
     {
         public static LinesOrdersDTO MapToDTO(DocumentLineOrder data)
         {
-            return new LinesOrdersDTO()
-            {
-                Codigo = data.ItemCode,
-                Descripcion = data.ItemDescription,
-                DescripcionAdicional = data.U_descitemfacil,
-                Cantidad = data.Quantity,
-                PrecioUnitario = data.PriceAfterVat,
-                PrecioDespuesImpuestos = data.PriceAfterVat,
-                Moneda = data.Currency,
-                Descuento = data.DiscountPercent,
-                TotalLinea = data.LineTotal,
-                CodigoDeAlmacen = data.WarehouseCode,
-                UnidadDeMedida = data.MeasureUnit,
-                EstadoLinea = data.LineStatus
-            };
+            LinesOrdersDTO linesOrdersDTO = new LinesOrdersDTO();
+            linesOrdersDTO.NumeroDeLinea = data.LineNum;
+            linesOrdersDTO.Codigo = data.ItemCode;
+            linesOrdersDTO.Descripcion = data.ItemDescription;
+            linesOrdersDTO.DescripcionAdicional = data.U_descitemfacil == null ? data.ItemDescription : data.U_descitemfacil;
+            linesOrdersDTO.Cantidad = data.Quantity;
+            linesOrdersDTO.PrecioUnitario = data.U_PrecioItemVenta == null ? data.PriceAfterVat : data.U_PrecioItemVenta;
+            linesOrdersDTO.PrecioDespuesImpuestos = data.PriceAfterVat;
+            linesOrdersDTO.Moneda = data.Currency;
+            linesOrdersDTO.Descuento = data.DiscountPercent;
+            linesOrdersDTO.TotalLinea = data.LineTotal;
+            linesOrdersDTO.CodigoDeAlmacen = data.WarehouseCode;
+            linesOrdersDTO.UnidadDeMedida = data.MeasureUnit;
+            linesOrdersDTO.CodigoUnidadMedida = data.UoMEntry;
+            linesOrdersDTO.FechaDeEntrega = data.ShipDate;
+            linesOrdersDTO.EstadoLinea = data.LineStatus;
+            return linesOrdersDTO;
         }
     }
 }

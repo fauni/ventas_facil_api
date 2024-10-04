@@ -11,5 +11,6 @@ namespace Data.Interfaces
     public interface IItemData
     {
         public List<ItemLote> GetLotesPorItem(Item item);
+        public List<ItemLote> GetLotesPorItemAll();
     }
 }

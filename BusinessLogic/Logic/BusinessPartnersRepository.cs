@@ -19,9 +19,17 @@ namespace BusinessLogic.Logic
         {
             _configuration = configuration;
         }
-        public async Task<(List<BusinessPartners> Result, CodeErrorException Error)> GetAll(string sessionID)
+        public async Task<(List<BusinessPartners> Result, CodeErrorException Error)> GetAll(string sessionID, int top, int skip, string text)
         {
-            string url = _configuration["UrlSap"] + "/BusinessPartners?$filter=CardType eq 'cCustomer'";
+            string url = string.Empty;
+            if(String.IsNullOrEmpty(text)) 
+            {
+                url = _configuration["UrlSap"] + $"/BusinessPartners?$filter=CardType eq 'cCustomer'&$top={top}&$skip={skip}";
+            } else
+            {
+                url = _configuration["UrlSap"] + $"/BusinessPartners?$filter=(contains(CardName, '{text}') or contains(CardCode, '{text}')) and CardType eq 'cCustomer'";
+            }
+            
             try
             {
                 HttpClientHandler handler = new HttpClientHandler();

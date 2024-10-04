@@ -29,11 +29,25 @@ builder.Services.AddScoped<IBPAdressRepository, BPAdressRepository>();
 builder.Services.AddScoped<IItemRepository, ItemRepository>();
 //Item Group
 builder.Services.AddScoped<IItemGroupRepository, ItemGroupRepository>();
+// Item Unidad de Medida
+builder.Services.AddScoped<IItemUnidadMedidaRepository, ItemUnidadMedidaRepository>();
 
 // Ventas
 builder.Services.AddScoped<IOrderRepository, OrderRepository>();
+builder.Services.AddScoped<IOrderPendingRepository, OrderPendingRepository>();
 // Personal de Ventas
 builder.Services.AddScoped<ISalesPersonsRepository, SalesPersonsRepository>();
+
+// Agrega el servicio CORS
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("MyCorsPolicy", builder =>
+    {
+        builder.AllowAnyOrigin() // URL del origen permitido
+                .AllowAnyMethod() // Permite todos los métodos
+                .AllowAnyHeader(); // Permite todas las cabeceras
+    });
+});
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -50,6 +64,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseCors("MyCorsPolicy");
 
 app.UseAuthorization();
 

@@ -43,7 +43,48 @@ namespace Data.Implementation
                         c.NombreArticulo = articulo["NombreArticulo"].ToString();
                         c.NumeroLote = articulo["NumeroLote"].ToString();
                         c.Stock = Convert.ToDouble(articulo["Stock"]);
-                        c.FechaVencimiento = Convert.ToDateTime(articulo["FechaVencimiento"]);
+                        // c.FechaVencimiento = Convert.ToDateTime(articulo["FechaVencimiento"]);
+                        c.FechaVencimiento = articulo["FechaVencimiento"] != DBNull.Value ? c.FechaVencimiento = Convert.ToDateTime(articulo["FechaVencimiento"]) : c.FechaVencimiento = null;
+                        result.Add(c);
+                    }
+                }
+                else
+                {
+                    throw new Exception(consulta.Error);
+                }
+
+            }
+            catch (Exception ex)
+            {
+
+            }
+            return result;
+        }
+
+        public List<ItemLote> GetLotesPorItemAll()
+        {
+            List<ItemLote> result = new List<ItemLote>();
+            try
+            {
+                string string_connection = _configuration.GetConnectionString("DatabaseConnectionSAP");
+                StoreProcedure consulta = new StoreProcedure(
+                    @$"SELECT T0.[WhsCode] as 'Almacen', T0.[ItemCode] as 'CodigoArticulo', T1.[ItemName] as 'NombreArticulo', 
+                    T0.[BatchNum] as 'NumeroLote', T0.[Quantity] as 'Stock', T0.[ExpDate] as 'FechaVencimiento'
+                    FROM OIBT T0  INNER JOIN OITM T1 ON T0.[ItemCode] = T1.[ItemCode]"
+                );
+                DataTable dt = consulta.EjecutarConsulta(string_connection);
+                if (string.IsNullOrEmpty(consulta.Error))
+                {
+                    foreach (DataRow articulo in dt.Rows)
+                    {
+                        ItemLote c = new ItemLote();
+                        c.Almacen = articulo["Almacen"].ToString();
+                        c.CodigoArticulo = articulo["CodigoArticulo"].ToString();
+                        c.NombreArticulo = articulo["NombreArticulo"].ToString();
+                        c.NumeroLote = articulo["NumeroLote"].ToString();
+                        c.Stock = Convert.ToDouble(articulo["Stock"]);
+                        // c.FechaVencimiento = Convert.ToDateTime(articulo["FechaVencimiento"]);
+                        c.FechaVencimiento = articulo["FechaVencimiento"] != DBNull.Value ? c.FechaVencimiento = Convert.ToDateTime(articulo["FechaVencimiento"]) : c.FechaVencimiento = null;
                         result.Add(c);
                     }
                 }

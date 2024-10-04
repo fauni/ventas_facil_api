@@ -1,13 +1,16 @@
 ﻿using Core.Entities.Errors;
-using Core.Entities.Producto;
-using Core.Entities.SocioNegocio;
 using Core.Entities.Ventas;
 using Core.Interfaces;
-using Microsoft.AspNetCore.Http;
+using iText.Kernel.Pdf;
+using iText.Layout.Element;
+using iText.Layout;
 using Microsoft.AspNetCore.Mvc;
+using System.Reflection.Metadata;
+using System.Text.Json;
 using WebApi.DTOs;
 using WebApi.DTOs.SocioNegocio;
 using WebApi.DTOs.Ventas;
+using Newtonsoft.Json;
 
 namespace WebApi.Controllers
 {
@@ -32,15 +35,19 @@ namespace WebApi.Controllers
             _businessPartnersRepository = businessPartnersRepository;
         }
 
+        #region METODOS MOSTRAR, GUARDAR, ACTUALIZAR
+
         [HttpGet]
-        public async Task<IActionResult> Get()
+        public async Task<IActionResult> Get(int top = 10, int skip = 0, string search = "")
         {
             try
             {
                 List<OrdersDTO> orders = new List<OrdersDTO>();
 
                 var sessionID = Request.Headers["Cookie"];
-                var result = await _repository.GetAll(sessionID);
+                var result = search.Length > 0 
+                    ? await _repository.GetForText(sessionID, search)
+                    : await _repository.GetAll(sessionID, top, skip);
                 if (result.Error != null)
                 {
                     return StatusCode(result.Error.StatusCode, result.Error);
@@ -74,6 +81,7 @@ namespace WebApi.Controllers
                 return StatusCode(500, new CodeErrorException(500, ex.Message, ex.StackTrace));
             }
         }
+
         [HttpGet("{id}")]
         public async Task<IActionResult> GetById(int id)
         {
@@ -82,30 +90,28 @@ namespace WebApi.Controllers
                 var sessionID = Request.Headers["Cookie"];
                 var result = await _repository.GetById(sessionID, id);
 
-                EmpleadoContactoDTO contactoDTO = new EmpleadoContactoDTO();
-                var resultSocioNegocio = await _businessPartnersRepository.GetByCodigo(sessionID, result.Result.CardCode);
-                var resultSalesPerson = await _salesPersonsRepository.GetById(sessionID, result.Result.SalesPersonCode);
-                var resultContactEmployee = await _contactEmployeeRepository.GetAll(sessionID);
-
-                OrdersDTO ordersDTO = MapeoOrderDTO.MapToDTO(result.Result);
-                foreach (var contacto in resultContactEmployee.Result)
-                {
-                    if (contacto.InternalCode == ordersDTO.CodigoPersonaDeContacto)
-                    {
-                        contactoDTO = MapeoEmpleadoContacto.MapToDTO(contacto);
-                    }
-                }
-                ordersDTO.Cliente = MapeoBusinessPartner.MapToDTO(resultSocioNegocio.Result);
-                ordersDTO.Empleado = MapeoSalesPerson.MapToDTO(resultSalesPerson.Result);
-                ordersDTO.Contacto = contactoDTO;
-
-
                 if (result.Error != null)
                 {
                     return StatusCode(result.Error.StatusCode, result.Error);
-                }
-                else
+                } else
                 {
+                    EmpleadoContactoDTO contactoDTO = new EmpleadoContactoDTO();
+                    var resultSocioNegocio = await _businessPartnersRepository.GetByCodigo(sessionID, result.Result.CardCode);
+                    var resultSalesPerson = await _salesPersonsRepository.GetById(sessionID, result.Result.SalesPersonCode);
+                    var resultContactEmployee = await _contactEmployeeRepository.GetAll(sessionID);
+
+                    OrdersDTO ordersDTO = MapeoOrderDTO.MapToDTO(result.Result);
+                    foreach (var contacto in resultContactEmployee.Result)
+                    {
+                        if (contacto.InternalCode == ordersDTO.CodigoPersonaDeContacto)
+                        {
+                            contactoDTO = MapeoEmpleadoContacto.MapToDTO(contacto);
+                        }
+                    }
+                    ordersDTO.Cliente = MapeoBusinessPartner.MapToDTO(resultSocioNegocio.Result);
+                    ordersDTO.Empleado = MapeoSalesPerson.MapToDTO(resultSalesPerson.Result);
+                    ordersDTO.Contacto = contactoDTO;
+
                     return Ok(ordersDTO);
                 }
             }
@@ -118,6 +124,7 @@ namespace WebApi.Controllers
         [HttpPost]
         public async Task<IActionResult> Post([FromBody] OrdenVentaDTO data)
         {
+            string jsonData = JsonConvert.SerializeObject(data);
             try
             {
                 var sessionID = Request.Headers["Cookie"];
@@ -130,8 +137,13 @@ namespace WebApi.Controllers
                     if (result.Error.StatusCode == 401)
                     {
                         return StatusCode(401, new CodeErrorException(401));
+                    } else if (result.Error.StatusCode == 404)
+                    {
+                        return Ok();
+                    } else
+                    {
+                        return StatusCode(result.Error.StatusCode, result.Error);
                     }
-                    return StatusCode(result.Error.StatusCode, result.Error);
                 }
                 var resultBP = await _businessPartnersRepository.GetByCodigo(sessionID, result.Result.CardCode);
                 var resultSP = await _salesPersonsRepository.GetById(sessionID, result.Result.SalesPersonCode);
@@ -178,25 +190,120 @@ namespace WebApi.Controllers
                 return StatusCode(500, new CodeErrorException(500, ex.Message, ex.StackTrace));
             }
         }
-        /*
-        [HttpPost]
-        public async Task<IActionResult> Post([FromBody] Order order)
+
+        [HttpPatch("modificarEstadoLinea/{id}")]
+        public async Task<IActionResult> ModificarEstadoLinea(int id, [FromBody] OrdenVentaUpdateDTO data)
         {
             try
             {
                 var sessionID = Request.Headers["Cookie"];
-                var result = await _repository.SaveOrder(sessionID, order);
+                OrderModificarLinea order = MapeoModificarEstadoLinea.DTOToMap(data);
+
+                var result = await _repository.UpdateStatusLineOrder(sessionID, id, order);
                 if (result.Error != null)
                 {
                     return StatusCode(result.Error.StatusCode, result.Error);
                 }
                 return Ok(result.Result);
+                // return Ok();
             }
             catch (Exception ex)
             {
                 return StatusCode(500, new CodeErrorException(500, ex.Message, ex.StackTrace));
             }
         }
-        */
+
+        #endregion
+
+        #region REPORTES  
+        [HttpGet("GenerarReporte/{id}")]
+        public async Task<IActionResult> GenerarReporte(int id)
+        {
+            try
+            {
+                var sessionID = Request.Headers["Cookie"];
+                var result = await _repository.GetById(sessionID, id);
+
+
+                if (result.Error != null)
+                {
+                    return StatusCode(result.Error.StatusCode, result.Error);
+                }
+                else
+                {
+                    //EmpleadoContactoDTO contactoDTO = new EmpleadoContactoDTO();
+                    //var resultSocioNegocio = await _businessPartnersRepository.GetByCodigo(sessionID, result.Result.CardCode);
+                    //var resultSalesPerson = await _salesPersonsRepository.GetById(sessionID, result.Result.SalesPersonCode);
+                    //var resultContactEmployee = await _contactEmployeeRepository.GetAll(sessionID);
+
+                    //OrdersDTO ordersDTO = MapeoOrderDTO.MapToDTO(result.Result);
+                    //foreach (var contacto in resultContactEmployee.Result)
+                    //{
+                    //    if (contacto.InternalCode == ordersDTO.CodigoPersonaDeContacto)
+                    //    {
+                    //        contactoDTO = MapeoEmpleadoContacto.MapToDTO(contacto);
+                    //    }
+                    //}
+                    //ordersDTO.Cliente = MapeoBusinessPartner.MapToDTO(resultSocioNegocio.Result);
+                    //ordersDTO.Empleado = MapeoSalesPerson.MapToDTO(resultSalesPerson.Result);
+                    //ordersDTO.Contacto = contactoDTO;
+
+                    // return Ok(ordersDTO);
+
+
+                    #region datos
+                    //Order data = new Order();
+                    //data.DocEntry = 246000053;
+                    //data.DocNum = 54;
+                    //data.DocDate = DateTime.Now;
+                    //data.CardCode = "00005";
+                    //data.CardName = "INSTITUTO DE MEDICINA NUCLEAR INAMEN";
+                    //data.SalesPersonCode = 30;
+                    //data.Comments = "Creado por app mobile 10-03-2024";
+                    //data.DocTotal = 10;
+                    //List<DocumentLineOrder> line = new List<DocumentLineOrder>();
+                    //line.Add(
+                    //    new DocumentLineOrder
+                    //    {
+                    //        LineNum = 0,
+                    //        ItemCode = "01E001",
+                    //        ItemDescription = "CONSERVADOR DE REACTIVOS 1P",
+                    //        Quantity = 1,
+                    //        UnitPrice = 10,
+                    //        ShipDate = Convert.ToDateTime("2024-04-18T00:00:00+00:00"),
+                    //        MeasureUnit = "UND",
+                    //        Currency = "BS",
+                    //        LineTotal = 10
+                    //    }
+                    //);
+                    //line.Add(
+                    //            new DocumentLineOrder
+                    //            {
+                    //                LineNum = 0,
+                    //                ItemCode = "01E001",
+                    //                ItemDescription = "CONSERVADOR DE REACTIVOS 1P",
+                    //                Quantity = 1,
+                    //                UnitPrice = 10,
+                    //                ShipDate = Convert.ToDateTime("2024-04-18T00:00:00+00:00"),
+                    //                MeasureUnit = "UND",
+                    //                Currency = "BS",
+                    //                LineTotal = 10
+                    //            }
+                    //        );
+                    //data.DocumentLines = line;
+                    #endregion
+
+
+
+                    var pdfStream = _repository.GenerarPDF(result.Result);
+                    return File(pdfStream.ToArray(), "application/pdf", "Report.pdf");
+                }
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new CodeErrorException(500, ex.Message, ex.StackTrace));
+            }
+        }
+        #endregion
     }
 }

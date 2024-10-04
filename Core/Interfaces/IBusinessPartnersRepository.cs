@@ -10,7 +10,7 @@ namespace Core.Interfaces
 {
     public interface IBusinessPartnersRepository
     {
-        Task<(List<BusinessPartners> Result, CodeErrorException Error)> GetAll(String sessionID);
+        Task<(List<BusinessPartners> Result, CodeErrorException Error)> GetAll(String sessionID, int top, int skip, string text);
         Task<(BusinessPartners Result, CodeErrorException Error)> GetByCodigo(String sessionID, string codigo);
     }
 }

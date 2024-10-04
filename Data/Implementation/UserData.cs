@@ -51,6 +51,7 @@ namespace Data.Implementation
                         u.IdCompany = Convert.ToInt32(item["IdCompany"]);
                         u.IdEmpleadoSap = Convert.ToInt32(item["IdEmpleadoSap"]);
                         u.Imagen = item["Imagen"].ToString();
+                        u.Almacen = item["Almacen"].ToString();
                         result = u;
                     }
                     else

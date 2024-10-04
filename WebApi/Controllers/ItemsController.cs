@@ -22,12 +22,12 @@ namespace WebApi.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> Get()
+        public async Task<IActionResult> Get(String text)
         {
             try
             {
                 var sessionID = Request.Headers["Cookie"];
-                var result = await _itemRepository.GetAll(sessionID);
+                var result = await _itemRepository.GetAll(sessionID, text);
                 if (result.Error != null)
                 {
                     return StatusCode(result.Error.StatusCode, result.Error);

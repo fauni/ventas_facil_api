@@ -25,5 +25,6 @@ namespace Core.Entities
         public int IdCompany { get; set; }
         public int IdEmpleadoSap { get; set; }
         public string Imagen { get; set; }
+        public string Almacen { get; set; }
     }
 }

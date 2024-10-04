@@ -10,3 +10,4 @@ E:\DESARROLLOS 2024\VENTAS FACIL\NetVentas\Core\obj\Debug\net6.0\Core.dll
 E:\DESARROLLOS 2024\VENTAS FACIL\NetVentas\Core\obj\Debug\net6.0\refint\Core.dll
 E:\DESARROLLOS 2024\VENTAS FACIL\NetVentas\Core\obj\Debug\net6.0\Core.pdb
 E:\DESARROLLOS 2024\VENTAS FACIL\NetVentas\Core\obj\Debug\net6.0\ref\Core.dll
+E:\DESARROLLOS 2024\VENTAS FACIL\NetVentas\Core\obj\Debug\net6.0\Core.csproj.AssemblyReference.cache

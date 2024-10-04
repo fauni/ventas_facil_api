@@ -26,6 +26,7 @@ namespace WebApi.DTOs.Ventas
         public SalesPersonsDTO Empleado { get; set; }
         public string Moneda { get; set; }
         public int? PersonaContacto { get; set; }
+        public int? IdCondicionDePago { get; set; }
         public List<LinesPedidoActualizarDTO> LinesPedido { get; set; }
         public string Ubicacion { get; set; }
     }
@@ -46,7 +47,7 @@ namespace WebApi.DTOs.Ventas
             List<DocumentLineModificarOrder> lines = new List<DocumentLineModificarOrder>();
             foreach (var item in dto.LinesPedido)
             {
-                lines.Add(MapeoLinesActualizarOrdenVenta.DTOToMap(item));
+                lines.Add(MapeoLinesActualizarOrdenVenta.DTOToMap(item, lines.Count));
             }
             return new OrderModificar()
             {
@@ -56,6 +57,7 @@ namespace WebApi.DTOs.Ventas
                 DocDate = dto.FechaRegistro,
                 SalesPersonCode = dto.IdEmpleado,
                 ContactPersonCode = dto.PersonaContacto,
+                PaymentGroupCode = dto.IdCondicionDePago,
                 Comments = dto.Observacion,
                 DocumentLines = lines,
                 //PickRemark = dto.Ubicacion
@@ -65,6 +67,7 @@ namespace WebApi.DTOs.Ventas
 
     public class LinesPedidoActualizarDTO
     {
+        public int? NumeroDeLinea { get; set; }
         public string Codigo { get; set; }
         public string Descripcion { get; set; }
         public string DescripcionAdicional { get; set; }
@@ -72,23 +75,59 @@ namespace WebApi.DTOs.Ventas
         public double? PrecioPorUnidad { get; set; }
         public double? Descuento { get; set; }
         public string IndicadorDeImpuestos { get; set; }
+        public int? CodigoUnidadMedida { get; set; }
+        public DateTimeOffset? FechaDeEntrega { get; set; }
     }
 
     public class MapeoLinesActualizarOrdenVenta
     {
-        public static DocumentLineModificarOrder DTOToMap(LinesPedidoActualizarDTO dto)
+        public static DocumentLineModificarOrder DTOToMap(LinesPedidoActualizarDTO dto, int index)
         {
             DocumentLineModificarOrder line = new DocumentLineModificarOrder();
+            line.LineNum = dto.NumeroDeLinea == null ? index : dto.NumeroDeLinea;
             line.ItemCode = dto.Codigo;
             line.U_descitemfacil = dto.DescripcionAdicional;
             line.Quantity = dto.Cantidad;
             line.TaxCode = "IVA";
             line.UnitPrice = dto.PrecioPorUnidad - (13 * dto.PrecioPorUnidad / 100);
             line.PriceAfterVAT = dto.PrecioPorUnidad - (dto.Descuento / 100 * dto.PrecioPorUnidad);
-            line.U_PrecioVenta = dto.PrecioPorUnidad;
+            // line.U_PrecioVenta = dto.PrecioPorUnidad;
             line.DiscountPercent = dto.Descuento;
-            line.Volume = dto.PrecioPorUnidad;
+            line.U_PrecioItemVenta = dto.PrecioPorUnidad;
+            line.UoMEntry = dto.CodigoUnidadMedida;
+            line.ShipDate = dto.FechaDeEntrega;
             return line;
         }
     }
+
+    #region ACTUALIZAR ESTADO LINEA
+    public class MapeoModificarEstadoLinea
+    {
+        public static OrderModificarLinea DTOToMap(OrdenVentaUpdateDTO dto)
+        {
+            List<OrderModificarLineaItem> lines = new List<OrderModificarLineaItem>();
+            foreach (var item in dto.LinesPedido)
+            {
+                lines.Add(MapeoItemModificarEstadoLinea.DTOToMap(item, lines.Count));
+            }
+            return new OrderModificarLinea()
+            {
+                DocEntry = dto.CodigoSap,
+                DocumentLines = lines,
+                //PickRemark = dto.Ubicacion
+            };
+        }
+    }
+
+    public class MapeoItemModificarEstadoLinea
+    {
+        public static OrderModificarLineaItem DTOToMap(LinesPedidoActualizarDTO dto, int index)
+        {
+            OrderModificarLineaItem line = new OrderModificarLineaItem();
+            line.LineNum = dto.NumeroDeLinea;
+            line.LineStatus = "bost_Close";
+            return line;
+        }
+    }
+    #endregion
 }

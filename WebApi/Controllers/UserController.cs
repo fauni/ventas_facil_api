@@ -29,7 +29,7 @@ namespace WebApi.Controllers
             var usuario = _userRepository.Login(user.UserName, user.PasswordHash, user.IdCompany, out error);
 
             var company = _companyRepository.GetCompanyByIdAsync(user.IdCompany);
-            var resultSap = await _userRepository.AuthenticatedUserSap(new LoginRequestModel { CompanyDB = company.CompanyDB, UserName = company.UserName, Password = company.Password });
+            var resultSap = await _userRepository.AuthenticatedUserSap(new LoginRequestModel { CompanyDB = company.CompanyDB, UserName = company.UserName, Password = company.Password , Language = "23"});
             
             try
             {

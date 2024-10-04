@@ -28,6 +28,7 @@ namespace WebApi.DTOs.Ventas
         public SalesPersonsDTO Empleado { get; set; }
         public string Moneda { get; set; }
         public int? PersonaContacto { get; set; }
+        public int? IdCondicionDePago { get; set; }
         public EmpleadoContactoDTO Contacto { get; set; }
         public List<LinesPedidoDTO> LinesPedido { get; set; }
         public string UsuarioVentaFacil { get; set; }
@@ -95,6 +96,7 @@ namespace WebApi.DTOs.Ventas
                 DocDate = dto.FechaRegistro,
                 SalesPersonCode = dto.Empleado.CodigoEmpleado,
                 ContactPersonCode = dto.PersonaContacto,
+                PaymentGroupCode = dto.IdCondicionDePago,
                 Comments = dto.Observacion,
                 DocumentLines = lines,
                 U_usrventafacil= dto.UsuarioVentaFacil,
@@ -108,6 +110,7 @@ namespace WebApi.DTOs.Ventas
 
     public class LinesPedidoDTO
     {
+        public int? NumeroDeLinea { get; set; }
         public string Codigo { get; set; }
         public string Descripcion { get; set; }
         public string DescripcionAdicional { get; set; }
@@ -115,6 +118,8 @@ namespace WebApi.DTOs.Ventas
         public double? PrecioPorUnidad { get; set; }
         public double? Descuento { get; set; }
         public string IndicadorDeImpuestos { get; set; }
+        public int? CodigoUnidadMedida { get; set; }
+        public DateTimeOffset? FechaDeEntrega { get; set; }
     }
 
     public class MapeoLinesOrdenVenta
@@ -123,13 +128,16 @@ namespace WebApi.DTOs.Ventas
         {
             return new LinesPedidoDTO()
             {
+                NumeroDeLinea = data.LineNum,
                 Codigo = data.ItemCode,
                 Descripcion = data.ItemDescription,
                 DescripcionAdicional = data.U_descitemfacil,
                 Cantidad = data.Quantity,
-                PrecioPorUnidad = data.PriceAfterVat,
+                PrecioPorUnidad = data.U_PrecioItemVenta,
                 Descuento = data.DiscountPercent,
                 IndicadorDeImpuestos = "IVA",
+                CodigoUnidadMedida = data.UoMEntry,
+                FechaDeEntrega = data.ShipDate
             };
         }
         public static DocumentLineGuardarOrder DTOToMap(LinesPedidoDTO dto)
@@ -142,7 +150,10 @@ namespace WebApi.DTOs.Ventas
             line.UnitPrice = dto.PrecioPorUnidad - (13 * dto.PrecioPorUnidad / 100);
             line.PriceAfterVAT = dto.PrecioPorUnidad - (dto.Descuento / 100 * dto.PrecioPorUnidad);
             line.U_PrecioVenta = dto.PrecioPorUnidad;
+            line.U_PrecioItemVenta = dto.PrecioPorUnidad;
             line.DiscountPercent = dto.Descuento;
+            line.UoMEntry = dto.CodigoUnidadMedida;
+            line.ShipDate = dto.FechaDeEntrega;
             return line;
         }
     }

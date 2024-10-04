@@ -15,9 +15,17 @@ namespace BusinessLogic.Logic
             _configuration = configuration;
         }
 
-        public async Task<(List<Item> Result, CodeErrorException Error)> GetAll(string sessionID)
+        public async Task<(List<Item> Result, CodeErrorException Error)> GetAll(string sessionID, string text)
         {
-            string url = _configuration["UrlSap"] + "/Items?$filter=SalesItem eq 'tYES'";
+            string url = String.Empty;
+            if (String.IsNullOrEmpty(text)) 
+            { 
+                url = _configuration["UrlSap"] + "/Items?$filter=SalesItem eq 'tYES'&$top=10&$skip=0";
+            } else
+            {
+                url = _configuration["UrlSap"] + $"/Items?$filter=(contains(ItemName, '{text}') or contains(ItemCode, '{text}')) and SalesItem eq 'tYES'";
+            }
+
             try
             {
                 HttpClientHandler handler = new HttpClientHandler();

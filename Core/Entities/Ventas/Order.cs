@@ -32,7 +32,7 @@ namespace Core.Entities.Ventas
         public string Reference2 { get; set; }
         public string Comments { get; set; }
         public string JournalMemo { get; set; }
-        public double? PaymentGroupCode { get; set; }
+        public int? PaymentGroupCode { get; set; }
         public DateTimeOffset? DocTime { get; set; }
         public int? SalesPersonCode { get; set; }
         public double? TransportationCode { get; set; }
@@ -277,7 +277,7 @@ namespace Core.Entities.Ventas
 
     public partial class DocumentLineOrder
     {
-        public double? LineNum { get; set; }
+        public int? LineNum { get; set; }
         public string ItemCode { get; set; }
         public string ItemDescription { get; set; }
         public double? Quantity { get; set; }
@@ -447,7 +447,7 @@ namespace Core.Entities.Ventas
         public string StgSeqNum { get; set; }
         public string StgEntry { get; set; }
         public string StgDesc { get; set; }
-        public double? UoMEntry { get; set; }
+        public int? UoMEntry { get; set; }
         public string UoMCode { get; set; }
         public double? InventoryQuantity { get; set; }
         public double? RemainingOpenInventoryQuantity { get; set; }
@@ -490,6 +490,7 @@ namespace Core.Entities.Ventas
         public double? ListNum { get; set; }
         public string U_descitemfacil { get; set; }
         public double? U_PrecioVenta { get; set; }
+        public double? U_PrecioItemVenta { get; set; }
         public List<LineTaxJurisdiction> LineTaxJurisdictions { get; set; }
         public List<string> DocumentLineAdditionalExpenses { get; set; }
         public List<string> WithholdingTaxLines { get; set; }
