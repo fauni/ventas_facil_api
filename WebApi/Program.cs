@@ -38,6 +38,9 @@ builder.Services.AddScoped<IOrderPendingRepository, OrderPendingRepository>();
 // Personal de Ventas
 builder.Services.AddScoped<ISalesPersonsRepository, SalesPersonsRepository>();
 
+// Series de documentos
+builder.Services.AddScoped<IDocumentSeriesRepository, DocumentSeriesRepository>();
+
 // Agrega el servicio CORS
 builder.Services.AddCors(options =>
 {

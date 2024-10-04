@@ -47,7 +47,6 @@ E:\DESARROLLOS 2024\VENTAS FACIL\NetVentas\WebApi\obj\Debug\net6.0\staticwebasse
 E:\DESARROLLOS 2024\VENTAS FACIL\NetVentas\WebApi\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.WebApi.props
 E:\DESARROLLOS 2024\VENTAS FACIL\NetVentas\WebApi\obj\Debug\net6.0\staticwebassets.pack.json
 E:\DESARROLLOS 2024\VENTAS FACIL\NetVentas\WebApi\obj\Debug\net6.0\scopedcss\bundle\WebApi.styles.css
-E:\DESARROLLOS 2024\VENTAS FACIL\NetVentas\WebApi\obj\Debug\net6.0\WebApi.csproj.CopyComplete
 E:\DESARROLLOS 2024\VENTAS FACIL\NetVentas\WebApi\obj\Debug\net6.0\WebApi.dll
 E:\DESARROLLOS 2024\VENTAS FACIL\NetVentas\WebApi\obj\Debug\net6.0\refint\WebApi.dll
 E:\DESARROLLOS 2024\VENTAS FACIL\NetVentas\WebApi\obj\Debug\net6.0\WebApi.pdb
@@ -71,3 +70,4 @@ E:\DESARROLLOS 2024\VENTAS FACIL\NetVentas\WebApi\bin\Debug\net6.0\Microsoft.Ext
 E:\DESARROLLOS 2024\VENTAS FACIL\NetVentas\WebApi\bin\Debug\net6.0\bc-fips-1.0.2.dll
 E:\DESARROLLOS 2024\VENTAS FACIL\NetVentas\WebApi\bin\Debug\net6.0\bcpkix-fips-1.0.2.dll
 E:\DESARROLLOS 2024\VENTAS FACIL\NetVentas\WebApi\bin\Debug\net6.0\itext.bouncy-castle-fips-adapter.dll
+E:\DESARROLLOS 2024\VENTAS FACIL\NetVentas\WebApi\obj\Debug\net6.0\WebApi.csproj.Up2Date
