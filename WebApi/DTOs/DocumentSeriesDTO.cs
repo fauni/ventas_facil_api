@@ -10,7 +10,7 @@ namespace WebApi.DTOs
         public long UltimoNumero { get; set; }
         public long SiguienteNumero { get; set; }
         public string Nombre { get; set; }
-        public long Series { get; set; }
+        public int? Series { get; set; }
         public string TipoDeSerie { get; set; }
     }
 

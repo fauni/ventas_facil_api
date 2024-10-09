@@ -29,6 +29,8 @@ namespace WebApi.DTOs.Ventas
         public int? IdCondicionDePago { get; set; }
         public List<LinesPedidoActualizarDTO> LinesPedido { get; set; }
         public string Ubicacion { get; set; }
+        public int CodigoSerieNumeracion { get; set; }
+        public string SerieNumeracion { get; set; }
     }
 
     public class MapeoModificarOrdenVenta
@@ -60,6 +62,7 @@ namespace WebApi.DTOs.Ventas
                 PaymentGroupCode = dto.IdCondicionDePago,
                 Comments = dto.Observacion,
                 DocumentLines = lines,
+                Series = dto.CodigoSerieNumeracion
                 //PickRemark = dto.Ubicacion
             };
         }

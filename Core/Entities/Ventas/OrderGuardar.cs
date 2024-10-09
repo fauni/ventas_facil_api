@@ -7,6 +7,7 @@
         public DateTimeOffset? DocDueDate { get; set; }
         public string CardCode { get; set; }
         public string Comments { get; set; }
+        public int? Series { get; set; }
         public int? SalesPersonCode { get; set; }
         public int? ContactPersonCode { get; set; }
         public int? PaymentGroupCode { get; set; }

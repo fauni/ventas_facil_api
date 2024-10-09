@@ -7,6 +7,7 @@ using WebApi.DTOs.Ventas;
 using WebApi.DTOs;
 using Core.Entities.Ventas;
 using static Org.BouncyCastle.Utilities.Test.FixedSecureRandom;
+using Core.Entities.Series;
 
 namespace WebApi.Controllers
 {
@@ -18,13 +19,15 @@ namespace WebApi.Controllers
         ISalesPersonsRepository _salesPersonsRepository;
         IContactEmployeeRepository _contactEmployeeRepository;
         IBusinessPartnersRepository _businessPartnersRepository;
+        IDocumentSeriesRepository _documentSeriesRepository;
 
-        public OrdersPendingController(IOrderPendingRepository repository, ISalesPersonsRepository salesPersonsRepository, IContactEmployeeRepository contactEmployeeRepository, IBusinessPartnersRepository businessPartnersRepository)
+        public OrdersPendingController(IOrderPendingRepository repository, ISalesPersonsRepository salesPersonsRepository, IContactEmployeeRepository contactEmployeeRepository, IBusinessPartnersRepository businessPartnersRepository, IDocumentSeriesRepository documentSeriesRepository)
         {
             _repository = repository;
             _salesPersonsRepository = salesPersonsRepository;
             _contactEmployeeRepository = contactEmployeeRepository;
             _businessPartnersRepository = businessPartnersRepository;
+            _documentSeriesRepository = documentSeriesRepository;
         }
 
         [HttpGet]
@@ -47,6 +50,10 @@ namespace WebApi.Controllers
                     foreach (var item in result.Result)
                     {
                         EmpleadoContactoDTO contactoDTO = new EmpleadoContactoDTO();
+                        DocumentSeries series = new DocumentSeries();
+                        var resultSerie = _documentSeriesRepository.GetForDocumentCode(sessionID, 17);
+                        series = resultSerie.Result.Result.FirstOrDefault(s => s.Series == item.Series);
+                        
                         var resultSocioNegocio = await _businessPartnersRepository.GetByCodigo(sessionID, item.CardCode);
                         var resultSalesPerson = await _salesPersonsRepository.GetById(sessionID, item.SalesPersonCode);
                         var resultContactEmployee = await _contactEmployeeRepository.GetAll(sessionID);
@@ -62,6 +69,8 @@ namespace WebApi.Controllers
                         ordersDTO.Cliente = MapeoBusinessPartner.MapToDTO(resultSocioNegocio.Result);
                         ordersDTO.Empleado = MapeoSalesPerson.MapToDTO(resultSalesPerson.Result);
                         ordersDTO.Contacto = contactoDTO;
+                        // ordersDTO.CodigoSerieNumeracion = series.Series;
+                        ordersDTO.NombreSerieNumeracion = series.Name;
                         orders.Add(ordersDTO);
                     }
                 }
@@ -97,6 +106,10 @@ namespace WebApi.Controllers
                         var resultSalesPerson = await _salesPersonsRepository.GetById(sessionID, item.SalesPersonCode);
                         var resultContactEmployee = await _contactEmployeeRepository.GetAll(sessionID);
 
+                        DocumentSeries series = new DocumentSeries();
+                        var resultSerie = _documentSeriesRepository.GetForDocumentCode(sessionID, 17);
+                        series = resultSerie.Result.Result.FirstOrDefault(s => s.Series == item.Series);
+
                         OrdersDTO ordersDTO = MapeoOrderDTO.MapToDTO(item);
                         foreach (var contacto in resultContactEmployee.Result)
                         {
@@ -108,6 +121,7 @@ namespace WebApi.Controllers
                         ordersDTO.Cliente = MapeoBusinessPartner.MapToDTO(resultSocioNegocio.Result);
                         ordersDTO.Empleado = MapeoSalesPerson.MapToDTO(resultSalesPerson.Result);
                         ordersDTO.Contacto = contactoDTO;
+                        ordersDTO.NombreSerieNumeracion = series.Name;
                         orders.Add(ordersDTO);
                     }
                 }

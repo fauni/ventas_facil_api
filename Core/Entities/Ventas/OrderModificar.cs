@@ -17,6 +17,7 @@ namespace Core.Entities.Ventas
         public int? ContactPersonCode { get; set; }
         public int? PaymentGroupCode { get; set; }
         public List<DocumentLineModificarOrder> DocumentLines { get; set; }
+        public int? Series { get; set; }
         //public string PickRemark { get; set; }
     }
 

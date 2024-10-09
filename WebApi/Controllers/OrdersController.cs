@@ -11,6 +11,8 @@ using WebApi.DTOs;
 using WebApi.DTOs.SocioNegocio;
 using WebApi.DTOs.Ventas;
 using Newtonsoft.Json;
+using BusinessLogic.Logic;
+using Core.Entities.Series;
 
 namespace WebApi.Controllers
 {
@@ -22,17 +24,20 @@ namespace WebApi.Controllers
         ISalesPersonsRepository _salesPersonsRepository;
         IContactEmployeeRepository _contactEmployeeRepository;
         IBusinessPartnersRepository _businessPartnersRepository;
+        IDocumentSeriesRepository _documentSeriesRepository;
         public OrdersController(
             IOrderRepository orderRepository, 
             ISalesPersonsRepository salesPersonsRepository, 
             IContactEmployeeRepository contactEmployeeRepository,
-            IBusinessPartnersRepository businessPartnersRepository
+            IBusinessPartnersRepository businessPartnersRepository,
+            IDocumentSeriesRepository documentSeriesRepository
         )
         {
             _repository = orderRepository;
             _salesPersonsRepository = salesPersonsRepository;
             _contactEmployeeRepository = contactEmployeeRepository;
             _businessPartnersRepository = businessPartnersRepository;
+            _documentSeriesRepository = documentSeriesRepository;
         }
 
         #region METODOS MOSTRAR, GUARDAR, ACTUALIZAR
@@ -59,7 +64,11 @@ namespace WebApi.Controllers
                         var resultSocioNegocio = await _businessPartnersRepository.GetByCodigo(sessionID, item.CardCode);
                         var resultSalesPerson = await _salesPersonsRepository.GetById(sessionID, item.SalesPersonCode);
                         var resultContactEmployee = await _contactEmployeeRepository.GetAll(sessionID);
-                        
+
+                        DocumentSeries series = new DocumentSeries();
+                        var resultSerie = _documentSeriesRepository.GetForDocumentCode(sessionID, 17);
+                        series = resultSerie.Result.Result.FirstOrDefault(s => s.Series == item.Series);
+
                         OrdersDTO ordersDTO = MapeoOrderDTO.MapToDTO(item);
                         foreach (var contacto in resultContactEmployee.Result)
                         {
@@ -71,6 +80,9 @@ namespace WebApi.Controllers
                         ordersDTO.Cliente = MapeoBusinessPartner.MapToDTO(resultSocioNegocio.Result);
                         ordersDTO.Empleado = MapeoSalesPerson.MapToDTO(resultSalesPerson.Result);
                         ordersDTO.Contacto = contactoDTO;
+
+                        ordersDTO.NombreSerieNumeracion = series.Name;
+
                         orders.Add(ordersDTO);
                     }
                 }

@@ -36,6 +36,9 @@ namespace WebApi.DTOs.Ventas
         public string Longitud { get; set; }
         public DateTimeOffset? FechaRegistroApp { get; set; }
         public DateTimeOffset? HoraRegistroApp { get; set; }
+        public int CodigoSerieNumeracion { get; set; }
+        public string SerieNumeracion { get; set; }
+
     }
 
     public class MapeoGuardarOrdenVenta
@@ -103,7 +106,8 @@ namespace WebApi.DTOs.Ventas
                 U_latitud = dto.Latitud,
                 U_longitud = dto.Longitud,
                 U_fecharegistroapp = dto.FechaRegistroApp,
-                U_horaregistroapp = dto.HoraRegistroApp
+                U_horaregistroapp = dto.HoraRegistroApp,
+                Series = dto.CodigoSerieNumeracion,
             };
         }
     }

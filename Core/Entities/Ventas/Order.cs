@@ -41,7 +41,8 @@ namespace Core.Entities.Ventas
         public string SummeryType { get; set; }
         public int? ContactPersonCode { get; set; }
         public string ShowScn { get; set; }
-        public double? Series { get; set; }
+        public int? Series { get; set; }
+        public string SeriesName { get; set; }
         public DateTimeOffset? TaxDate { get; set; }
         public string PartialSupply { get; set; }
         public string DocstringCode { get; set; }

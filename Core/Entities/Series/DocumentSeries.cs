@@ -25,7 +25,7 @@ namespace Core.Entities.Series
         public string Locked { get; set; }
         public string PeriodIndicator { get; set; }
         public string Name { get; set; }
-        public long Series { get; set; }
+        public int? Series { get; set; }
         public string IsDigitalSeries { get; set; }
         public string DigitNumber { get; set; }
         public string SeriesType { get; set; }

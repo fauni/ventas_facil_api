@@ -35,6 +35,8 @@ namespace WebApi.DTOs.Ventas
         public string Longitud { get; set; }
         public DateTimeOffset? FechaRegistroApp { get; set; }
         public DateTimeOffset? HoraRegistroApp { get; set; }
+        public int? CodigoSerieNumeracion { get; set; }
+        public string NombreSerieNumeracion { get; set; }
 
         public double? TotalAntesDelDescuento()
         {
@@ -97,7 +99,9 @@ namespace WebApi.DTOs.Ventas
                 Latitud = data.U_latitud,
                 Longitud = data.U_longitud,
                 FechaRegistroApp = data.U_fecharegistroapp,
-                HoraRegistroApp = data.U_horaregistroapp
+                HoraRegistroApp = data.U_horaregistroapp,
+                CodigoSerieNumeracion = data.Series,
+                NombreSerieNumeracion = data.SeriesName
             }; 
         }
         
