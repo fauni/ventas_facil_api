@@ -1,14 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "cyScCpZmXSkvdGMxHs7STtjbx04xjXaRla54O8f/awc7AIdRUqPQ8BeXCaYQe2A1btMJZunRsKHCtcrZchIV6w==",
+  "dgSpecHash": "ZX2VITryaSxSgwExw0PNsSU/cQPwEmn2KvZXZoMU/71Si3JsKbMqTGRjfvwn21meBuvCWQIembfWDbS7sQzK/Q==",
   "success": true,
   "projectFilePath": "E:\\DESARROLLOS 2024\\VENTAS FACIL\\NetVentas\\BusinessLogic\\BusinessLogic.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Franz Aruni\\.nuget\\packages\\itext\\8.0.3\\itext.8.0.3.nupkg.sha512",
-    "C:\\Users\\Franz Aruni\\.nuget\\packages\\itext.bouncy-castle-fips-adapter\\8.0.3\\itext.bouncy-castle-fips-adapter.8.0.3.nupkg.sha512",
-    "C:\\Users\\Franz Aruni\\.nuget\\packages\\itext.commons\\8.0.3\\itext.commons.8.0.3.nupkg.sha512",
-    "C:\\Users\\Franz Aruni\\.nuget\\packages\\itext7\\8.0.3\\itext7.8.0.3.nupkg.sha512",
-    "C:\\Users\\Franz Aruni\\.nuget\\packages\\itext7.bouncy-castle-fips-adapter\\8.0.3\\itext7.bouncy-castle-fips-adapter.8.0.3.nupkg.sha512",
+    "C:\\Users\\Franz Aruni\\.nuget\\packages\\itext\\8.0.5\\itext.8.0.5.nupkg.sha512",
+    "C:\\Users\\Franz Aruni\\.nuget\\packages\\itext.bouncy-castle-fips-adapter\\8.0.5\\itext.bouncy-castle-fips-adapter.8.0.5.nupkg.sha512",
+    "C:\\Users\\Franz Aruni\\.nuget\\packages\\itext.commons\\8.0.5\\itext.commons.8.0.5.nupkg.sha512",
+    "C:\\Users\\Franz Aruni\\.nuget\\packages\\itext7\\8.0.5\\itext7.8.0.5.nupkg.sha512",
+    "C:\\Users\\Franz Aruni\\.nuget\\packages\\itext7.bouncy-castle-fips-adapter\\8.0.5\\itext7.bouncy-castle-fips-adapter.8.0.5.nupkg.sha512",
     "C:\\Users\\Franz Aruni\\.nuget\\packages\\microsoft.dotnet.platformabstractions\\1.1.0\\microsoft.dotnet.platformabstractions.1.1.0.nupkg.sha512",
     "C:\\Users\\Franz Aruni\\.nuget\\packages\\microsoft.extensions.configuration\\8.0.0\\microsoft.extensions.configuration.8.0.0.nupkg.sha512",
     "C:\\Users\\Franz Aruni\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\8.0.0\\microsoft.extensions.configuration.abstractions.8.0.0.nupkg.sha512",
@@ -46,8 +46,8 @@
     "C:\\Users\\Franz Aruni\\.nuget\\packages\\system.collections\\4.3.0\\system.collections.4.3.0.nupkg.sha512",
     "C:\\Users\\Franz Aruni\\.nuget\\packages\\system.collections.concurrent\\4.3.0\\system.collections.concurrent.4.3.0.nupkg.sha512",
     "C:\\Users\\Franz Aruni\\.nuget\\packages\\system.collections.nongeneric\\4.3.0\\system.collections.nongeneric.4.3.0.nupkg.sha512",
-    "C:\\Users\\Franz Aruni\\.nuget\\packages\\system.data.odbc\\8.0.0\\system.data.odbc.8.0.0.nupkg.sha512",
-    "C:\\Users\\Franz Aruni\\.nuget\\packages\\system.data.sqlclient\\4.8.5\\system.data.sqlclient.4.8.5.nupkg.sha512",
+    "C:\\Users\\Franz Aruni\\.nuget\\packages\\system.data.odbc\\8.0.1\\system.data.odbc.8.0.1.nupkg.sha512",
+    "C:\\Users\\Franz Aruni\\.nuget\\packages\\system.data.sqlclient\\4.8.6\\system.data.sqlclient.4.8.6.nupkg.sha512",
     "C:\\Users\\Franz Aruni\\.nuget\\packages\\system.diagnostics.debug\\4.3.0\\system.diagnostics.debug.4.3.0.nupkg.sha512",
     "C:\\Users\\Franz Aruni\\.nuget\\packages\\system.diagnostics.process\\4.3.0\\system.diagnostics.process.4.3.0.nupkg.sha512",
     "C:\\Users\\Franz Aruni\\.nuget\\packages\\system.diagnostics.tracing\\4.3.0\\system.diagnostics.tracing.4.3.0.nupkg.sha512",
@@ -85,7 +85,7 @@
     "C:\\Users\\Franz Aruni\\.nuget\\packages\\system.security.cryptography.primitives\\4.3.0\\system.security.cryptography.primitives.4.3.0.nupkg.sha512",
     "C:\\Users\\Franz Aruni\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512",
     "C:\\Users\\Franz Aruni\\.nuget\\packages\\system.text.encoding\\4.3.0\\system.text.encoding.4.3.0.nupkg.sha512",
-    "C:\\Users\\Franz Aruni\\.nuget\\packages\\system.text.encoding.codepages\\8.0.0\\system.text.encoding.codepages.8.0.0.nupkg.sha512",
+    "C:\\Users\\Franz Aruni\\.nuget\\packages\\system.text.encoding.codepages\\4.3.0\\system.text.encoding.codepages.4.3.0.nupkg.sha512",
     "C:\\Users\\Franz Aruni\\.nuget\\packages\\system.text.encoding.extensions\\4.3.0\\system.text.encoding.extensions.4.3.0.nupkg.sha512",
     "C:\\Users\\Franz Aruni\\.nuget\\packages\\system.text.regularexpressions\\4.3.1\\system.text.regularexpressions.4.3.1.nupkg.sha512",
     "C:\\Users\\Franz Aruni\\.nuget\\packages\\system.threading\\4.3.0\\system.threading.4.3.0.nupkg.sha512",
@@ -96,16 +96,5 @@
     "C:\\Users\\Franz Aruni\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\Franz Aruni\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1903",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "El paquete \"System.Data.SqlClient\" 4.8.5 tiene una vulnerabilidad de gravedad alta conocida, https://github.com/advisories/GHSA-98g6-xh36-x2p7",
-      "libraryId": "System.Data.SqlClient",
-      "targetGraphs": [
-        "net6.0"
-      ]
-    }
-  ]
+  "logs": []
 }

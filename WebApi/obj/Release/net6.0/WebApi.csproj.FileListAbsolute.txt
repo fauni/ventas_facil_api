@@ -15,7 +15,6 @@ E:\DESARROLLOS 2024\VENTAS FACIL\NetVentas\WebApi\bin\Release\net6.0\Swashbuckle
 E:\DESARROLLOS 2024\VENTAS FACIL\NetVentas\WebApi\bin\Release\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 E:\DESARROLLOS 2024\VENTAS FACIL\NetVentas\WebApi\bin\Release\net6.0\System.Data.Odbc.dll
 E:\DESARROLLOS 2024\VENTAS FACIL\NetVentas\WebApi\bin\Release\net6.0\System.Data.SqlClient.dll
-E:\DESARROLLOS 2024\VENTAS FACIL\NetVentas\WebApi\bin\Release\net6.0\System.Text.Encoding.CodePages.dll
 E:\DESARROLLOS 2024\VENTAS FACIL\NetVentas\WebApi\bin\Release\net6.0\runtimes\win-arm64\native\sni.dll
 E:\DESARROLLOS 2024\VENTAS FACIL\NetVentas\WebApi\bin\Release\net6.0\runtimes\win-x64\native\sni.dll
 E:\DESARROLLOS 2024\VENTAS FACIL\NetVentas\WebApi\bin\Release\net6.0\runtimes\win-x86\native\sni.dll
@@ -25,7 +24,6 @@ E:\DESARROLLOS 2024\VENTAS FACIL\NetVentas\WebApi\bin\Release\net6.0\runtimes\os
 E:\DESARROLLOS 2024\VENTAS FACIL\NetVentas\WebApi\bin\Release\net6.0\runtimes\win\lib\net6.0\System.Data.Odbc.dll
 E:\DESARROLLOS 2024\VENTAS FACIL\NetVentas\WebApi\bin\Release\net6.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
 E:\DESARROLLOS 2024\VENTAS FACIL\NetVentas\WebApi\bin\Release\net6.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
-E:\DESARROLLOS 2024\VENTAS FACIL\NetVentas\WebApi\bin\Release\net6.0\runtimes\win\lib\net6.0\System.Text.Encoding.CodePages.dll
 E:\DESARROLLOS 2024\VENTAS FACIL\NetVentas\WebApi\bin\Release\net6.0\BusinessLogic.dll
 E:\DESARROLLOS 2024\VENTAS FACIL\NetVentas\WebApi\bin\Release\net6.0\Core.dll
 E:\DESARROLLOS 2024\VENTAS FACIL\NetVentas\WebApi\bin\Release\net6.0\Data.dll
@@ -47,7 +45,6 @@ E:\DESARROLLOS 2024\VENTAS FACIL\NetVentas\WebApi\obj\Release\net6.0\staticwebas
 E:\DESARROLLOS 2024\VENTAS FACIL\NetVentas\WebApi\obj\Release\net6.0\staticwebassets\msbuild.buildTransitive.WebApi.props
 E:\DESARROLLOS 2024\VENTAS FACIL\NetVentas\WebApi\obj\Release\net6.0\staticwebassets.pack.json
 E:\DESARROLLOS 2024\VENTAS FACIL\NetVentas\WebApi\obj\Release\net6.0\scopedcss\bundle\WebApi.styles.css
-E:\DESARROLLOS 2024\VENTAS FACIL\NetVentas\WebApi\obj\Release\net6.0\WebApi.csproj.CopyComplete
 E:\DESARROLLOS 2024\VENTAS FACIL\NetVentas\WebApi\obj\Release\net6.0\WebApi.dll
 E:\DESARROLLOS 2024\VENTAS FACIL\NetVentas\WebApi\obj\Release\net6.0\refint\WebApi.dll
 E:\DESARROLLOS 2024\VENTAS FACIL\NetVentas\WebApi\obj\Release\net6.0\WebApi.pdb
@@ -71,3 +68,4 @@ E:\DESARROLLOS 2024\VENTAS FACIL\NetVentas\WebApi\bin\Release\net6.0\itext.bounc
 E:\DESARROLLOS 2024\VENTAS FACIL\NetVentas\WebApi\bin\Release\net6.0\itext.commons.dll
 E:\DESARROLLOS 2024\VENTAS FACIL\NetVentas\WebApi\bin\Release\net6.0\Microsoft.DotNet.PlatformAbstractions.dll
 E:\DESARROLLOS 2024\VENTAS FACIL\NetVentas\WebApi\bin\Release\net6.0\Microsoft.Extensions.DependencyModel.dll
+E:\DESARROLLOS 2024\VENTAS FACIL\NetVentas\WebApi\obj\Release\net6.0\WebApi.csproj.Up2Date

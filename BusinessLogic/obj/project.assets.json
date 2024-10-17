@@ -2,7 +2,7 @@
   "version": 3,
   "targets": {
     "net6.0": {
-      "itext/8.0.3": {
+      "itext/8.0.5": {
         "type": "package",
         "dependencies": {
           "Microsoft.DotNet.PlatformAbstractions": "1.1.0",
@@ -19,7 +19,7 @@
           "System.Threading.Thread": "4.3.0",
           "System.Threading.ThreadPool": "4.3.0",
           "System.Xml.XmlDocument": "4.3.0",
-          "itext.commons": "8.0.3"
+          "itext.commons": "8.0.5"
         },
         "compile": {
           "lib/netstandard2.0/itext.barcodes.dll": {
@@ -92,10 +92,10 @@
           }
         }
       },
-      "itext.bouncy-castle-fips-adapter/8.0.3": {
+      "itext.bouncy-castle-fips-adapter/8.0.5": {
         "type": "package",
         "dependencies": {
-          "itext.commons": "8.0.3"
+          "itext.commons": "8.0.5"
         },
         "compile": {
           "lib/netstandard2.0/bc-fips-1.0.2.dll": {},
@@ -112,7 +112,7 @@
           }
         }
       },
-      "itext.commons/8.0.3": {
+      "itext.commons/8.0.5": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.Logging": "5.0.0",
@@ -129,16 +129,16 @@
           }
         }
       },
-      "itext7/8.0.3": {
+      "itext7/8.0.5": {
         "type": "package",
         "dependencies": {
-          "itext": "8.0.3"
+          "itext": "8.0.5"
         }
       },
-      "itext7.bouncy-castle-fips-adapter/8.0.3": {
+      "itext7.bouncy-castle-fips-adapter/8.0.5": {
         "type": "package",
         "dependencies": {
-          "itext.bouncy-castle-fips-adapter": "8.0.3"
+          "itext.bouncy-castle-fips-adapter": "8.0.5"
         }
       },
       "Microsoft.DotNet.PlatformAbstractions/1.1.0": {
@@ -632,11 +632,8 @@
           "lib/netstandard1.3/System.Collections.NonGeneric.dll": {}
         }
       },
-      "System.Data.Odbc/8.0.0": {
+      "System.Data.Odbc/8.0.1": {
         "type": "package",
-        "dependencies": {
-          "System.Text.Encoding.CodePages": "8.0.0"
-        },
         "compile": {
           "lib/net6.0/System.Data.Odbc.dll": {
             "related": ".xml"
@@ -669,7 +666,7 @@
           }
         }
       },
-      "System.Data.SqlClient/4.8.5": {
+      "System.Data.SqlClient/4.8.6": {
         "type": "package",
         "dependencies": {
           "Microsoft.Win32.Registry": "4.7.0",
@@ -1404,26 +1401,33 @@
           }
         }
       },
-      "System.Text.Encoding.CodePages/8.0.0": {
+      "System.Text.Encoding.CodePages/4.3.0": {
         "type": "package",
         "dependencies": {
-          "System.Runtime.CompilerServices.Unsafe": "6.0.0"
+          "Microsoft.NETCore.Platforms": "1.1.0",
+          "System.Collections": "4.3.0",
+          "System.Globalization": "4.3.0",
+          "System.IO": "4.3.0",
+          "System.Reflection": "4.3.0",
+          "System.Resources.ResourceManager": "4.3.0",
+          "System.Runtime": "4.3.0",
+          "System.Runtime.Extensions": "4.3.0",
+          "System.Runtime.Handles": "4.3.0",
+          "System.Runtime.InteropServices": "4.3.0",
+          "System.Text.Encoding": "4.3.0",
+          "System.Threading": "4.3.0"
         },
         "compile": {
-          "lib/net6.0/System.Text.Encoding.CodePages.dll": {
+          "ref/netstandard1.3/System.Text.Encoding.CodePages.dll": {
             "related": ".xml"
           }
-        },
-        "runtime": {
-          "lib/net6.0/System.Text.Encoding.CodePages.dll": {
-            "related": ".xml"
-          }
-        },
-        "build": {
-          "buildTransitive/net6.0/_._": {}
         },
         "runtimeTargets": {
-          "runtimes/win/lib/net6.0/System.Text.Encoding.CodePages.dll": {
+          "runtimes/unix/lib/netstandard1.3/System.Text.Encoding.CodePages.dll": {
+            "assetType": "runtime",
+            "rid": "unix"
+          },
+          "runtimes/win/lib/netstandard1.3/System.Text.Encoding.CodePages.dll": {
             "assetType": "runtime",
             "rid": "win"
           }
@@ -1600,8 +1604,8 @@
         "dependencies": {
           "Core": "1.0.0",
           "Microsoft.Extensions.Configuration": "8.0.0",
-          "System.Data.Odbc": "8.0.0",
-          "System.Data.SqlClient": "4.8.5"
+          "System.Data.Odbc": "8.0.1",
+          "System.Data.SqlClient": "4.8.6"
         },
         "compile": {
           "bin/placeholder/Data.dll": {}
@@ -1613,17 +1617,17 @@
     }
   },
   "libraries": {
-    "itext/8.0.3": {
-      "sha512": "Qm6WtQ7sTWW95FIPYCNnQwOCesQQk1HoJ7Gpdn/xWGWf1p392NKwwmtovzUeV9zbACV0yae3LVcT9z9azIU6hQ==",
+    "itext/8.0.5": {
+      "sha512": "AptrL1Kvm4SrrkZSSfvQF9heRHekr9R91gR/3hEFR0uxJlBdVMmVnPQiTS+AhxJwalNtGNytKeFMWRoEUpWuTg==",
       "type": "package",
-      "path": "itext/8.0.3",
+      "path": "itext/8.0.5",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "ITSC-avatar.png",
         "LICENSE.md",
         "gnu-agpl-v3.0.md",
-        "itext.8.0.3.nupkg.sha512",
+        "itext.8.0.5.nupkg.sha512",
         "itext.nuspec",
         "lib/net461/itext.barcodes.dll",
         "lib/net461/itext.barcodes.xml",
@@ -1671,15 +1675,15 @@
         "lib/netstandard2.0/itext.svg.xml"
       ]
     },
-    "itext.bouncy-castle-fips-adapter/8.0.3": {
-      "sha512": "jtqvPSixFtNnwkuC7gvP7/9qtZvHZhuK18hPT0FT2rlZQvoinYJfxdQlV6aqeTiZyjR62O7cGR52wzv2ZQfHNA==",
+    "itext.bouncy-castle-fips-adapter/8.0.5": {
+      "sha512": "ELlh9H/xwOICIdtb1YB4pWKFTOwgiSPpwOKlcRdQUpUT7s5q+C8iB4gHI4Unfv9i7dh626elz6Cbi8crmMvQcA==",
       "type": "package",
-      "path": "itext.bouncy-castle-fips-adapter/8.0.3",
+      "path": "itext.bouncy-castle-fips-adapter/8.0.5",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "ITSC-avatar.png",
-        "itext.bouncy-castle-fips-adapter.8.0.3.nupkg.sha512",
+        "itext.bouncy-castle-fips-adapter.8.0.5.nupkg.sha512",
         "itext.bouncy-castle-fips-adapter.nuspec",
         "lib/netstandard2.0/bc-fips-1.0.2.dll",
         "lib/netstandard2.0/bcpkix-fips-1.0.2.dll",
@@ -1687,15 +1691,15 @@
         "lib/netstandard2.0/itext.bouncy-castle-fips-adapter.xml"
       ]
     },
-    "itext.commons/8.0.3": {
-      "sha512": "Nd6K3z1UA+OBonOUnQ5odUjvleTZfSH4rdMQFhPu0Y29JN/iKsCAznpw6vlFvoLa7cqP+/5bQOUlvVJaf/bK6A==",
+    "itext.commons/8.0.5": {
+      "sha512": "exnLqeWOnn0Ee393bHf3zWTmcYuQfYuj7iIbMluG49XFczMWMMXrN9UvMmt5iYOKq0mGZsYb1eRoVATGuDiXGQ==",
       "type": "package",
-      "path": "itext.commons/8.0.3",
+      "path": "itext.commons/8.0.5",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "ITSC-avatar.png",
-        "itext.commons.8.0.3.nupkg.sha512",
+        "itext.commons.8.0.5.nupkg.sha512",
         "itext.commons.nuspec",
         "lib/net461/itext.commons.dll",
         "lib/net461/itext.commons.xml",
@@ -1703,31 +1707,31 @@
         "lib/netstandard2.0/itext.commons.xml"
       ]
     },
-    "itext7/8.0.3": {
-      "sha512": "cdeEkdomN5tgi2cp2++7onbSSBwIh9FOeTLK297jItA6gbZXsG4FaRg8msvHPbHIBTTivl44mHvi3dEBmY3naQ==",
+    "itext7/8.0.5": {
+      "sha512": "/1btEFYY+ncIR7j/g+pr26PX8Nbly8pbdDWfSHQq9E/rbxhz0ylkOLVpXNEvoaV545q508P8hociHaRiRG7bwg==",
       "type": "package",
-      "path": "itext7/8.0.3",
+      "path": "itext7/8.0.5",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "ITSC-avatar.png",
         "LICENSE.md",
         "gnu-agpl-v3.0.md",
-        "itext7.8.0.3.nupkg.sha512",
+        "itext7.8.0.5.nupkg.sha512",
         "itext7.nuspec"
       ]
     },
-    "itext7.bouncy-castle-fips-adapter/8.0.3": {
-      "sha512": "bkUJGVeAOjABRY/tORq+obf981JS7towf6l7EgcdtXMCdHaNwEm5NLOZNeW6FqDF6TcYl3rHXAuHJoG6uEn/ZQ==",
+    "itext7.bouncy-castle-fips-adapter/8.0.5": {
+      "sha512": "sIKa6UcsCv3aNscxDv/QUaTKKv7/PLTtYC2nhcCNb2QV7zoRAWuQWWVE+nz0PGw7yIme9j89CT9p1IhVjjQJLg==",
       "type": "package",
-      "path": "itext7.bouncy-castle-fips-adapter/8.0.3",
+      "path": "itext7.bouncy-castle-fips-adapter/8.0.5",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "ITSC-avatar.png",
         "LICENSE.md",
         "gnu-agpl-v3.0.md",
-        "itext7.bouncy-castle-fips-adapter.8.0.3.nupkg.sha512",
+        "itext7.bouncy-castle-fips-adapter.8.0.5.nupkg.sha512",
         "itext7.bouncy-castle-fips-adapter.nuspec"
       ]
     },
@@ -2592,10 +2596,10 @@
         "system.collections.nongeneric.nuspec"
       ]
     },
-    "System.Data.Odbc/8.0.0": {
-      "sha512": "c+GfnZt2/HyU+voKw2fctLZClcNjPZPWS+mnIhGvDknRMqL/fwWlREWPgA4csbp9ZkQIgB4qkufgdh/oh5Ubow==",
+    "System.Data.Odbc/8.0.1": {
+      "sha512": "JQd0QHOaZuH+ki+4Geas88dnLe/lZSaEYYmRdovZaqNVuExVlVFs/of2I1VaasMxzbO5+yrGDAP2rkazx/b8Sg==",
       "type": "package",
-      "path": "system.data.odbc/8.0.0",
+      "path": "system.data.odbc/8.0.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2657,15 +2661,15 @@
         "runtimes/win/lib/net7.0/System.Data.Odbc.xml",
         "runtimes/win/lib/net8.0/System.Data.Odbc.dll",
         "runtimes/win/lib/net8.0/System.Data.Odbc.xml",
-        "system.data.odbc.8.0.0.nupkg.sha512",
+        "system.data.odbc.8.0.1.nupkg.sha512",
         "system.data.odbc.nuspec",
         "useSharedDesignerContext.txt"
       ]
     },
-    "System.Data.SqlClient/4.8.5": {
-      "sha512": "fRqxut4lrndPHrXD+ht1XRmCL3obuKldm4XjCRYS9p5f7FSR7shBxAwTkDrpFMsHC9BhNgjjmUtiIjvehn5zkg==",
+    "System.Data.SqlClient/4.8.6": {
+      "sha512": "2Ij/LCaTQRyAi5lAv7UUTV9R2FobC8xN9mE0fXBZohum/xLl8IZVmE98Rq5ugQHjCgTBRKqpXRb4ORulRdA6Ig==",
       "type": "package",
-      "path": "system.data.sqlclient/4.8.5",
+      "path": "system.data.sqlclient/4.8.6",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2742,7 +2746,7 @@
         "runtimes/win/lib/netstandard2.0/System.Data.SqlClient.xml",
         "runtimes/win/lib/uap10.0.16299/System.Data.SqlClient.dll",
         "runtimes/win/lib/uap10.0.16299/System.Data.SqlClient.xml",
-        "system.data.sqlclient.4.8.5.nupkg.sha512",
+        "system.data.sqlclient.4.8.6.nupkg.sha512",
         "system.data.sqlclient.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
@@ -4796,46 +4800,43 @@
         "system.text.encoding.nuspec"
       ]
     },
-    "System.Text.Encoding.CodePages/8.0.0": {
-      "sha512": "OZIsVplFGaVY90G2SbpgU7EnCoOO5pw1t4ic21dBF3/1omrJFpAGoNAVpPyMVOC90/hvgkGG3VFqR13YgZMQfg==",
+    "System.Text.Encoding.CodePages/4.3.0": {
+      "sha512": "IRiEFUa5b/Gs5Egg8oqBVoywhtOeaO2KOx3j0RfcYY/raxqBuEK7NXRDgOwtYM8qbi+7S4RPXUbNt+ZxyY0/NQ==",
       "type": "package",
-      "path": "system.text.encoding.codepages/8.0.0",
+      "path": "system.text.encoding.codepages/4.3.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "Icon.png",
-        "LICENSE.TXT",
-        "PACKAGE.md",
-        "THIRD-PARTY-NOTICES.TXT",
-        "buildTransitive/net461/System.Text.Encoding.CodePages.targets",
-        "buildTransitive/net462/_._",
-        "buildTransitive/net6.0/_._",
-        "buildTransitive/netcoreapp2.0/System.Text.Encoding.CodePages.targets",
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
         "lib/MonoTouch10/_._",
-        "lib/net462/System.Text.Encoding.CodePages.dll",
-        "lib/net462/System.Text.Encoding.CodePages.xml",
-        "lib/net6.0/System.Text.Encoding.CodePages.dll",
-        "lib/net6.0/System.Text.Encoding.CodePages.xml",
-        "lib/net7.0/System.Text.Encoding.CodePages.dll",
-        "lib/net7.0/System.Text.Encoding.CodePages.xml",
-        "lib/net8.0/System.Text.Encoding.CodePages.dll",
-        "lib/net8.0/System.Text.Encoding.CodePages.xml",
-        "lib/netstandard2.0/System.Text.Encoding.CodePages.dll",
-        "lib/netstandard2.0/System.Text.Encoding.CodePages.xml",
+        "lib/net46/System.Text.Encoding.CodePages.dll",
         "lib/xamarinios10/_._",
         "lib/xamarinmac20/_._",
         "lib/xamarintvos10/_._",
         "lib/xamarinwatchos10/_._",
-        "runtimes/win/lib/net6.0/System.Text.Encoding.CodePages.dll",
-        "runtimes/win/lib/net6.0/System.Text.Encoding.CodePages.xml",
-        "runtimes/win/lib/net7.0/System.Text.Encoding.CodePages.dll",
-        "runtimes/win/lib/net7.0/System.Text.Encoding.CodePages.xml",
-        "runtimes/win/lib/net8.0/System.Text.Encoding.CodePages.dll",
-        "runtimes/win/lib/net8.0/System.Text.Encoding.CodePages.xml",
-        "system.text.encoding.codepages.8.0.0.nupkg.sha512",
-        "system.text.encoding.codepages.nuspec",
-        "useSharedDesignerContext.txt"
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/netstandard1.3/System.Text.Encoding.CodePages.dll",
+        "ref/netstandard1.3/System.Text.Encoding.CodePages.xml",
+        "ref/netstandard1.3/de/System.Text.Encoding.CodePages.xml",
+        "ref/netstandard1.3/es/System.Text.Encoding.CodePages.xml",
+        "ref/netstandard1.3/fr/System.Text.Encoding.CodePages.xml",
+        "ref/netstandard1.3/it/System.Text.Encoding.CodePages.xml",
+        "ref/netstandard1.3/ja/System.Text.Encoding.CodePages.xml",
+        "ref/netstandard1.3/ko/System.Text.Encoding.CodePages.xml",
+        "ref/netstandard1.3/ru/System.Text.Encoding.CodePages.xml",
+        "ref/netstandard1.3/zh-hans/System.Text.Encoding.CodePages.xml",
+        "ref/netstandard1.3/zh-hant/System.Text.Encoding.CodePages.xml",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "runtimes/unix/lib/netstandard1.3/System.Text.Encoding.CodePages.dll",
+        "runtimes/win/lib/netstandard1.3/System.Text.Encoding.CodePages.dll",
+        "system.text.encoding.codepages.4.3.0.nupkg.sha512",
+        "system.text.encoding.codepages.nuspec"
       ]
     },
     "System.Text.Encoding.Extensions/4.3.0": {
@@ -5354,9 +5355,9 @@
       "Data >= 1.0.0",
       "Microsoft.Extensions.Configuration >= 8.0.0",
       "Newtonsoft.Json >= 13.0.3",
-      "System.Data.SqlClient >= 4.8.5",
-      "itext7 >= 8.0.3",
-      "itext7.bouncy-castle-fips-adapter >= 8.0.3"
+      "System.Data.SqlClient >= 4.8.6",
+      "itext7 >= 8.0.5",
+      "itext7.bouncy-castle-fips-adapter >= 8.0.5"
     ]
   },
   "packageFolders": {
@@ -5420,15 +5421,15 @@
           },
           "System.Data.SqlClient": {
             "target": "Package",
-            "version": "[4.8.5, )"
+            "version": "[4.8.6, )"
           },
           "itext7": {
             "target": "Package",
-            "version": "[8.0.3, )"
+            "version": "[8.0.5, )"
           },
           "itext7.bouncy-castle-fips-adapter": {
             "target": "Package",
-            "version": "[8.0.3, )"
+            "version": "[8.0.5, )"
           }
         },
         "imports": [
@@ -5450,17 +5451,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204\\RuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1903",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "El paquete \"System.Data.SqlClient\" 4.8.5 tiene una vulnerabilidad de gravedad alta conocida, https://github.com/advisories/GHSA-98g6-xh36-x2p7",
-      "libraryId": "System.Data.SqlClient",
-      "targetGraphs": [
-        "net6.0"
-      ]
-    }
-  ]
+  }
 }

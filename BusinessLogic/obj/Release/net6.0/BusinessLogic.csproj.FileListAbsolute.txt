@@ -10,9 +10,9 @@ E:\DESARROLLOS 2024\VENTAS FACIL\NetVentas\BusinessLogic\obj\Release\net6.0\Busi
 E:\DESARROLLOS 2024\VENTAS FACIL\NetVentas\BusinessLogic\obj\Release\net6.0\BusinessLogic.AssemblyInfoInputs.cache
 E:\DESARROLLOS 2024\VENTAS FACIL\NetVentas\BusinessLogic\obj\Release\net6.0\BusinessLogic.AssemblyInfo.cs
 E:\DESARROLLOS 2024\VENTAS FACIL\NetVentas\BusinessLogic\obj\Release\net6.0\BusinessLogic.csproj.CoreCompileInputs.cache
-E:\DESARROLLOS 2024\VENTAS FACIL\NetVentas\BusinessLogic\obj\Release\net6.0\BusinessLogic.csproj.CopyComplete
 E:\DESARROLLOS 2024\VENTAS FACIL\NetVentas\BusinessLogic\obj\Release\net6.0\BusinessLogic.dll
 E:\DESARROLLOS 2024\VENTAS FACIL\NetVentas\BusinessLogic\obj\Release\net6.0\refint\BusinessLogic.dll
 E:\DESARROLLOS 2024\VENTAS FACIL\NetVentas\BusinessLogic\obj\Release\net6.0\BusinessLogic.pdb
 E:\DESARROLLOS 2024\VENTAS FACIL\NetVentas\BusinessLogic\obj\Release\net6.0\ref\BusinessLogic.dll
 E:\DESARROLLOS 2024\VENTAS FACIL\NetVentas\BusinessLogic\obj\Release\net6.0\BusinessLogic.sourcelink.json
+E:\DESARROLLOS 2024\VENTAS FACIL\NetVentas\BusinessLogic\obj\Release\net6.0\Business.CF5D6E35.Up2Date

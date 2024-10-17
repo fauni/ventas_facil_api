@@ -96,7 +96,7 @@ namespace Data.Implementation
             }
             catch (Exception ex)
             {
-
+                // throw new Exception($"Error al obtener los datos: {ex.Message}");
             }
             return result;
         }
