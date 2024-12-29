@@ -19,7 +19,7 @@ namespace Data.Implementation
         {
             _configuration = configuration;
         }
-
+        
         public List<ItemLote> GetLotesPorItem(Item item)
         {
             List<ItemLote> result = new List<ItemLote>();
@@ -97,6 +97,52 @@ namespace Data.Implementation
             catch (Exception ex)
             {
                 // throw new Exception($"Error al obtener los datos: {ex.Message}");
+            }
+            return result;
+        }
+
+        public List<ItemLote> GetNumeroSeriePorItem(Item item)
+        {
+            List<ItemLote> result = new List<ItemLote>();
+            try
+            {
+                string string_connection = _configuration.GetConnectionString("DatabaseConnectionSAP");
+                StoreProcedure consulta = new StoreProcedure(
+                    @$"SELECT 
+	                    OSRQ.WhsCode as 'Almacen',
+                        OSRN.ItemCode as 'CodigoArticulo', 
+	                    OSRN.itemName as 'NombreArticulo',
+                        OSRN.DistNumber as 'NumeroLote',
+	                    OSRQ.Quantity as 'Stock',
+	                    OSRN.ExpDate as 'FechaVencimiento'
+                    FROM OSRN INNER JOIN OSRQ ON OSRN.AbsEntry = OSRQ.AbsEntry
+                    WHERE OSRN.ItemCode = '{item.ItemCode}'"
+                );
+                DataTable dt = consulta.EjecutarConsulta(string_connection);
+                if (string.IsNullOrEmpty(consulta.Error))
+                {
+                    foreach (DataRow articulo in dt.Rows)
+                    {
+                        ItemLote c = new ItemLote();
+                        c.Almacen = articulo["Almacen"].ToString();
+                        c.CodigoArticulo = articulo["CodigoArticulo"].ToString();
+                        c.NombreArticulo = articulo["NombreArticulo"].ToString();
+                        c.NumeroLote = articulo["NumeroLote"].ToString();
+                        c.Stock = Convert.ToDouble(articulo["Stock"]);
+                        // c.FechaVencimiento = Convert.ToDateTime(articulo["FechaVencimiento"]);
+                        c.FechaVencimiento = articulo["FechaVencimiento"] != DBNull.Value ? c.FechaVencimiento = Convert.ToDateTime(articulo["FechaVencimiento"]) : c.FechaVencimiento = null;
+                        result.Add(c);
+                    }
+                }
+                else
+                {
+                    throw new Exception(consulta.Error);
+                }
+
+            }
+            catch (Exception ex)
+            {
+
             }
             return result;
         }

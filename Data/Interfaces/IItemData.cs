@@ -12,5 +12,7 @@ namespace Data.Interfaces
     {
         public List<ItemLote> GetLotesPorItem(Item item);
         public List<ItemLote> GetLotesPorItemAll();
+
+        public List<ItemLote> GetNumeroSeriePorItem(Item item);
     }
 }

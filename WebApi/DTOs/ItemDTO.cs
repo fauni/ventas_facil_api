@@ -14,6 +14,7 @@ namespace WebApi.DTOs
         public string EsArticuloDeInventario { get; set;}
         public string EsArticuloDeVenta { get; set; }
         public string EsGestionadoNumeroLote { get; set; }
+        public string EsGestionadoPorNumeroSerie { get; set; }
         public string UnidadMedidaVenta { get; set; }
         public string UnidadMedidaInventario { get; set; }
         public double? GrupoUnidadMedida { get; set; }
@@ -48,6 +49,7 @@ namespace WebApi.DTOs
                 EsArticuloDeInventario = item.InventoryItem,
                 EsArticuloDeVenta = item.SalesItem,
                 EsGestionadoNumeroLote = item.ManageBatchNumbers,
+                EsGestionadoPorNumeroSerie = item.ManageSerialNumbers,
                 UnidadMedidaVenta = item.SalesUnit,
                 UnidadMedidaInventario = item.InventoryUom,
                 GrupoUnidadMedida = item.UoMGroupEntry,

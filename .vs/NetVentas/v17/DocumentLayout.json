@@ -3,44 +3,132 @@
   "WorkspaceRootPath": "E:\\DESARROLLOS 2024\\VENTAS FACIL\\NetVentas\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{62A319B7-43FC-45F0-BE1A-8C36A868702F}|Data\\Data.csproj|e:\\desarrollos 2024\\ventas facil\\netventas\\data\\implementation\\userseriedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{62A319B7-43FC-45F0-BE1A-8C36A868702F}|Data\\Data.csproj|solutionrelative:data\\implementation\\userseriedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{62A319B7-43FC-45F0-BE1A-8C36A868702F}|Data\\Data.csproj|e:\\desarrollos 2024\\ventas facil\\netventas\\data\\implementation\\userdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{62A319B7-43FC-45F0-BE1A-8C36A868702F}|Data\\Data.csproj|solutionrelative:data\\implementation\\userdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1D1C6F10-7BEA-4EC4-8A05-BCD53BD04A13}|WebApi\\WebApi.csproj|e:\\desarrollos 2024\\ventas facil\\netventas\\webapi\\controllers\\itemscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1D1C6F10-7BEA-4EC4-8A05-BCD53BD04A13}|WebApi\\WebApi.csproj|solutionrelative:webapi\\controllers\\itemscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{62A319B7-43FC-45F0-BE1A-8C36A868702F}|Data\\Data.csproj|e:\\desarrollos 2024\\ventas facil\\netventas\\data\\implementation\\itemdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{62A319B7-43FC-45F0-BE1A-8C36A868702F}|Data\\Data.csproj|solutionrelative:data\\implementation\\itemdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E9EA4FB4-E217-4040-AB1F-DC4741297DA2}|Core\\Core.csproj|e:\\desarrollos 2024\\ventas facil\\netventas\\core\\entities\\userserie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E9EA4FB4-E217-4040-AB1F-DC4741297DA2}|Core\\Core.csproj|solutionrelative:core\\entities\\userserie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E9EA4FB4-E217-4040-AB1F-DC4741297DA2}|Core\\Core.csproj|e:\\desarrollos 2024\\ventas facil\\netventas\\core\\entities\\producto\\itemlote.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E9EA4FB4-E217-4040-AB1F-DC4741297DA2}|Core\\Core.csproj|solutionrelative:core\\entities\\producto\\itemlote.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1D1C6F10-7BEA-4EC4-8A05-BCD53BD04A13}|WebApi\\WebApi.csproj|e:\\desarrollos 2024\\ventas facil\\netventas\\webapi\\dtos\\itemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1D1C6F10-7BEA-4EC4-8A05-BCD53BD04A13}|WebApi\\WebApi.csproj|solutionrelative:webapi\\dtos\\itemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{62A319B7-43FC-45F0-BE1A-8C36A868702F}|Data\\Data.csproj|e:\\desarrollos 2024\\ventas facil\\netventas\\data\\interfaces\\iitemdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{62A319B7-43FC-45F0-BE1A-8C36A868702F}|Data\\Data.csproj|solutionrelative:data\\interfaces\\iitemdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1D1C6F10-7BEA-4EC4-8A05-BCD53BD04A13}|WebApi\\WebApi.csproj|e:\\desarrollos 2024\\ventas facil\\netventas\\webapi\\controllers\\userseriecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1D1C6F10-7BEA-4EC4-8A05-BCD53BD04A13}|WebApi\\WebApi.csproj|solutionrelative:webapi\\controllers\\userseriecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1D1C6F10-7BEA-4EC4-8A05-BCD53BD04A13}|WebApi\\WebApi.csproj|e:\\desarrollos 2024\\ventas facil\\netventas\\webapi\\dtos\\items\\itemventadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1D1C6F10-7BEA-4EC4-8A05-BCD53BD04A13}|WebApi\\WebApi.csproj|solutionrelative:webapi\\dtos\\items\\itemventadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1D1C6F10-7BEA-4EC4-8A05-BCD53BD04A13}|WebApi\\WebApi.csproj|e:\\desarrollos 2024\\ventas facil\\netventas\\webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1D1C6F10-7BEA-4EC4-8A05-BCD53BD04A13}|WebApi\\WebApi.csproj|solutionrelative:webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1D1C6F10-7BEA-4EC4-8A05-BCD53BD04A13}|WebApi\\WebApi.csproj|e:\\desarrollos 2024\\ventas facil\\netventas\\webapi\\dtos\\items\\itemalmacendto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1D1C6F10-7BEA-4EC4-8A05-BCD53BD04A13}|WebApi\\WebApi.csproj|solutionrelative:webapi\\dtos\\items\\itemalmacendto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{62A319B7-43FC-45F0-BE1A-8C36A868702F}|Data\\Data.csproj|e:\\desarrollos 2024\\ventas facil\\netventas\\data\\interfaces\\iuserseriedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{62A319B7-43FC-45F0-BE1A-8C36A868702F}|Data\\Data.csproj|solutionrelative:data\\interfaces\\iuserseriedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DB8A6709-EE58-4619-AAC9-FB1F04C4F359}|BusinessLogic\\BusinessLogic.csproj|e:\\desarrollos 2024\\ventas facil\\netventas\\businesslogic\\logic\\itemrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB8A6709-EE58-4619-AAC9-FB1F04C4F359}|BusinessLogic\\BusinessLogic.csproj|solutionrelative:businesslogic\\logic\\itemrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{62A319B7-43FC-45F0-BE1A-8C36A868702F}|Data\\Data.csproj|e:\\desarrollos 2024\\ventas facil\\netventas\\data\\interfaces\\icompanydata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{62A319B7-43FC-45F0-BE1A-8C36A868702F}|Data\\Data.csproj|solutionrelative:data\\interfaces\\icompanydata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{62A319B7-43FC-45F0-BE1A-8C36A868702F}|Data\\Data.csproj|e:\\desarrollos 2024\\ventas facil\\netventas\\data\\implementation\\userdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62A319B7-43FC-45F0-BE1A-8C36A868702F}|Data\\Data.csproj|solutionrelative:data\\implementation\\userdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{62A319B7-43FC-45F0-BE1A-8C36A868702F}|Data\\Data.csproj|e:\\desarrollos 2024\\ventas facil\\netventas\\data\\interfaces\\iuserdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{62A319B7-43FC-45F0-BE1A-8C36A868702F}|Data\\Data.csproj|solutionrelative:data\\interfaces\\iuserdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1D1C6F10-7BEA-4EC4-8A05-BCD53BD04A13}|WebApi\\WebApi.csproj|e:\\desarrollos 2024\\ventas facil\\netventas\\webapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1D1C6F10-7BEA-4EC4-8A05-BCD53BD04A13}|WebApi\\WebApi.csproj|solutionrelative:webapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62A319B7-43FC-45F0-BE1A-8C36A868702F}|Data\\Data.csproj|e:\\desarrollos 2024\\ventas facil\\netventas\\data\\implementation\\companydata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62A319B7-43FC-45F0-BE1A-8C36A868702F}|Data\\Data.csproj|solutionrelative:data\\implementation\\companydata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB8A6709-EE58-4619-AAC9-FB1F04C4F359}|BusinessLogic\\BusinessLogic.csproj|e:\\desarrollos 2024\\ventas facil\\netventas\\businesslogic\\logic\\orderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB8A6709-EE58-4619-AAC9-FB1F04C4F359}|BusinessLogic\\BusinessLogic.csproj|solutionrelative:businesslogic\\logic\\orderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E9EA4FB4-E217-4040-AB1F-DC4741297DA2}|Core\\Core.csproj|e:\\desarrollos 2024\\ventas facil\\netventas\\core\\entities\\sapresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E9EA4FB4-E217-4040-AB1F-DC4741297DA2}|Core\\Core.csproj|solutionrelative:core\\entities\\sapresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1D1C6F10-7BEA-4EC4-8A05-BCD53BD04A13}|WebApi\\WebApi.csproj|e:\\desarrollos 2024\\ventas facil\\netventas\\webapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{1D1C6F10-7BEA-4EC4-8A05-BCD53BD04A13}|WebApi\\WebApi.csproj|solutionrelative:webapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB8A6709-EE58-4619-AAC9-FB1F04C4F359}|BusinessLogic\\BusinessLogic.csproj|e:\\desarrollos 2024\\ventas facil\\netventas\\businesslogic\\logic\\companyrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB8A6709-EE58-4619-AAC9-FB1F04C4F359}|BusinessLogic\\BusinessLogic.csproj|solutionrelative:businesslogic\\logic\\companyrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB8A6709-EE58-4619-AAC9-FB1F04C4F359}|BusinessLogic\\BusinessLogic.csproj|e:\\desarrollos 2024\\ventas facil\\netventas\\businesslogic\\logic\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB8A6709-EE58-4619-AAC9-FB1F04C4F359}|BusinessLogic\\BusinessLogic.csproj|solutionrelative:businesslogic\\logic\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB8A6709-EE58-4619-AAC9-FB1F04C4F359}|BusinessLogic\\BusinessLogic.csproj|e:\\desarrollos 2024\\ventas facil\\netventas\\businesslogic\\logic\\paymenttermstypesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB8A6709-EE58-4619-AAC9-FB1F04C4F359}|BusinessLogic\\BusinessLogic.csproj|solutionrelative:businesslogic\\logic\\paymenttermstypesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB8A6709-EE58-4619-AAC9-FB1F04C4F359}|BusinessLogic\\BusinessLogic.csproj|e:\\desarrollos 2024\\ventas facil\\netventas\\businesslogic\\logic\\orderpendingrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB8A6709-EE58-4619-AAC9-FB1F04C4F359}|BusinessLogic\\BusinessLogic.csproj|solutionrelative:businesslogic\\logic\\orderpendingrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB8A6709-EE58-4619-AAC9-FB1F04C4F359}|BusinessLogic\\BusinessLogic.csproj|e:\\desarrollos 2024\\ventas facil\\netventas\\businesslogic\\logic\\itemunidadmedidarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB8A6709-EE58-4619-AAC9-FB1F04C4F359}|BusinessLogic\\BusinessLogic.csproj|solutionrelative:businesslogic\\logic\\itemunidadmedidarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB8A6709-EE58-4619-AAC9-FB1F04C4F359}|BusinessLogic\\BusinessLogic.csproj|e:\\desarrollos 2024\\ventas facil\\netventas\\businesslogic\\logic\\itemgrouprepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB8A6709-EE58-4619-AAC9-FB1F04C4F359}|BusinessLogic\\BusinessLogic.csproj|solutionrelative:businesslogic\\logic\\itemgrouprepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB8A6709-EE58-4619-AAC9-FB1F04C4F359}|BusinessLogic\\BusinessLogic.csproj|e:\\desarrollos 2024\\ventas facil\\netventas\\businesslogic\\logic\\documentseriesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB8A6709-EE58-4619-AAC9-FB1F04C4F359}|BusinessLogic\\BusinessLogic.csproj|solutionrelative:businesslogic\\logic\\documentseriesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB8A6709-EE58-4619-AAC9-FB1F04C4F359}|BusinessLogic\\BusinessLogic.csproj|e:\\desarrollos 2024\\ventas facil\\netventas\\businesslogic\\logic\\contactemployeerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB8A6709-EE58-4619-AAC9-FB1F04C4F359}|BusinessLogic\\BusinessLogic.csproj|solutionrelative:businesslogic\\logic\\contactemployeerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB8A6709-EE58-4619-AAC9-FB1F04C4F359}|BusinessLogic\\BusinessLogic.csproj|e:\\desarrollos 2024\\ventas facil\\netventas\\businesslogic\\logic\\businesspartnersrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB8A6709-EE58-4619-AAC9-FB1F04C4F359}|BusinessLogic\\BusinessLogic.csproj|solutionrelative:businesslogic\\logic\\businesspartnersrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB8A6709-EE58-4619-AAC9-FB1F04C4F359}|BusinessLogic\\BusinessLogic.csproj|e:\\desarrollos 2024\\ventas facil\\netventas\\businesslogic\\logic\\bpadressrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB8A6709-EE58-4619-AAC9-FB1F04C4F359}|BusinessLogic\\BusinessLogic.csproj|solutionrelative:businesslogic\\logic\\bpadressrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E9EA4FB4-E217-4040-AB1F-DC4741297DA2}|Core\\Core.csproj|e:\\desarrollos 2024\\ventas facil\\netventas\\core\\interfaces\\iorderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E9EA4FB4-E217-4040-AB1F-DC4741297DA2}|Core\\Core.csproj|solutionrelative:core\\interfaces\\iorderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1D1C6F10-7BEA-4EC4-8A05-BCD53BD04A13}|WebApi\\WebApi.csproj|e:\\desarrollos 2024\\ventas facil\\netventas\\webapi\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1D1C6F10-7BEA-4EC4-8A05-BCD53BD04A13}|WebApi\\WebApi.csproj|solutionrelative:webapi\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1D1C6F10-7BEA-4EC4-8A05-BCD53BD04A13}|WebApi\\WebApi.csproj|e:\\desarrollos 2024\\ventas facil\\netventas\\webapi\\controllers\\salespersoncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1D1C6F10-7BEA-4EC4-8A05-BCD53BD04A13}|WebApi\\WebApi.csproj|solutionrelative:webapi\\controllers\\salespersoncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1D1C6F10-7BEA-4EC4-8A05-BCD53BD04A13}|WebApi\\WebApi.csproj|e:\\desarrollos 2024\\ventas facil\\netventas\\webapi\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1D1C6F10-7BEA-4EC4-8A05-BCD53BD04A13}|WebApi\\WebApi.csproj|solutionrelative:webapi\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB8A6709-EE58-4619-AAC9-FB1F04C4F359}|BusinessLogic\\BusinessLogic.csproj|e:\\desarrollos 2024\\ventas facil\\netventas\\businesslogic\\businesslogic.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{DB8A6709-EE58-4619-AAC9-FB1F04C4F359}|BusinessLogic\\BusinessLogic.csproj|solutionrelative:businesslogic\\businesslogic.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1D1C6F10-7BEA-4EC4-8A05-BCD53BD04A13}|WebApi\\WebApi.csproj|e:\\desarrollos 2024\\ventas facil\\netventas\\webapi\\webapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{1D1C6F10-7BEA-4EC4-8A05-BCD53BD04A13}|WebApi\\WebApi.csproj|solutionrelative:webapi\\webapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62A319B7-43FC-45F0-BE1A-8C36A868702F}|Data\\Data.csproj|e:\\desarrollos 2024\\ventas facil\\netventas\\data\\data.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{62A319B7-43FC-45F0-BE1A-8C36A868702F}|Data\\Data.csproj|solutionrelative:data\\data.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E9EA4FB4-E217-4040-AB1F-DC4741297DA2}|Core\\Core.csproj|e:\\desarrollos 2024\\ventas facil\\netventas\\core\\core.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{E9EA4FB4-E217-4040-AB1F-DC4741297DA2}|Core\\Core.csproj|solutionrelative:core\\core.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,76 +138,18 @@
       "DocumentGroups": [
         {
           "DockedWidth": 342,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ItemData.cs",
-              "DocumentMoniker": "E:\\DESARROLLOS 2024\\VENTAS FACIL\\NetVentas\\Data\\Implementation\\ItemData.cs",
-              "RelativeDocumentMoniker": "Data\\Implementation\\ItemData.cs",
-              "ToolTip": "E:\\DESARROLLOS 2024\\VENTAS FACIL\\NetVentas\\Data\\Implementation\\ItemData.cs",
-              "RelativeToolTip": "Data\\Implementation\\ItemData.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAYwBsAAABkAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-15T15:05:31.157Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "UserData.cs",
-              "DocumentMoniker": "E:\\DESARROLLOS 2024\\VENTAS FACIL\\NetVentas\\Data\\Implementation\\UserData.cs",
-              "RelativeDocumentMoniker": "Data\\Implementation\\UserData.cs",
-              "ToolTip": "E:\\DESARROLLOS 2024\\VENTAS FACIL\\NetVentas\\Data\\Implementation\\UserData.cs",
-              "RelativeToolTip": "Data\\Implementation\\UserData.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAABEAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-15T15:04:50.786Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "UserSerie.cs",
-              "DocumentMoniker": "E:\\DESARROLLOS 2024\\VENTAS FACIL\\NetVentas\\Core\\Entities\\UserSerie.cs",
-              "RelativeDocumentMoniker": "Core\\Entities\\UserSerie.cs",
-              "ToolTip": "E:\\DESARROLLOS 2024\\VENTAS FACIL\\NetVentas\\Core\\Entities\\UserSerie.cs",
-              "RelativeToolTip": "Core\\Entities\\UserSerie.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAvAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-15T15:01:53.118Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Program.cs",
-              "DocumentMoniker": "E:\\DESARROLLOS 2024\\VENTAS FACIL\\NetVentas\\WebApi\\Program.cs",
-              "RelativeDocumentMoniker": "WebApi\\Program.cs",
-              "ToolTip": "E:\\DESARROLLOS 2024\\VENTAS FACIL\\NetVentas\\WebApi\\Program.cs",
-              "RelativeToolTip": "WebApi\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAlAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-10T16:42:20.61Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "UserSerieData.cs",
-              "DocumentMoniker": "E:\\DESARROLLOS 2024\\VENTAS FACIL\\NetVentas\\Data\\Implementation\\UserSerieData.cs",
-              "RelativeDocumentMoniker": "Data\\Implementation\\UserSerieData.cs",
-              "ToolTip": "E:\\DESARROLLOS 2024\\VENTAS FACIL\\NetVentas\\Data\\Implementation\\UserSerieData.cs",
-              "RelativeToolTip": "Data\\Implementation\\UserSerieData.cs",
-              "ViewState": "AQIAACkAAAAAAAAAAAAAADQAAAA9AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-10T16:34:24.142Z",
-              "EditorCaption": ""
-            },
+            }
+          ]
+        },
+        {
+          "DockedWidth": 214,
+          "SelectedChildIndex": 4,
+          "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 4,
@@ -128,57 +158,393 @@
               "RelativeDocumentMoniker": "Data\\Interfaces\\IItemData.cs",
               "ToolTip": "E:\\DESARROLLOS 2024\\VENTAS FACIL\\NetVentas\\Data\\Interfaces\\IItemData.cs",
               "RelativeToolTip": "Data\\Interfaces\\IItemData.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAA5AAAA",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAA/AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-10T16:32:31.652Z"
+              "WhenOpened": "2024-12-19T19:56:05.769Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "ICompanyData.cs",
-              "DocumentMoniker": "E:\\DESARROLLOS 2024\\VENTAS FACIL\\NetVentas\\Data\\Interfaces\\ICompanyData.cs",
-              "RelativeDocumentMoniker": "Data\\Interfaces\\ICompanyData.cs",
-              "ToolTip": "E:\\DESARROLLOS 2024\\VENTAS FACIL\\NetVentas\\Data\\Interfaces\\ICompanyData.cs",
-              "RelativeToolTip": "Data\\Interfaces\\ICompanyData.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAIAAAA",
+              "DocumentIndex": 2,
+              "Title": "ItemLote.cs",
+              "DocumentMoniker": "E:\\DESARROLLOS 2024\\VENTAS FACIL\\NetVentas\\Core\\Entities\\Producto\\ItemLote.cs",
+              "RelativeDocumentMoniker": "Core\\Entities\\Producto\\ItemLote.cs",
+              "ToolTip": "E:\\DESARROLLOS 2024\\VENTAS FACIL\\NetVentas\\Core\\Entities\\Producto\\ItemLote.cs",
+              "RelativeToolTip": "Core\\Entities\\Producto\\ItemLote.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAwBAAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-10T16:32:29.731Z"
+              "WhenOpened": "2024-12-19T19:53:45.386Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "IUserData.cs",
-              "DocumentMoniker": "E:\\DESARROLLOS 2024\\VENTAS FACIL\\NetVentas\\Data\\Interfaces\\IUserData.cs",
-              "RelativeDocumentMoniker": "Data\\Interfaces\\IUserData.cs",
-              "ToolTip": "E:\\DESARROLLOS 2024\\VENTAS FACIL\\NetVentas\\Data\\Interfaces\\IUserData.cs",
-              "RelativeToolTip": "Data\\Interfaces\\IUserData.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "DocumentIndex": 1,
+              "Title": "ItemData.cs",
+              "DocumentMoniker": "E:\\DESARROLLOS 2024\\VENTAS FACIL\\NetVentas\\Data\\Implementation\\ItemData.cs",
+              "RelativeDocumentMoniker": "Data\\Implementation\\ItemData.cs",
+              "ToolTip": "E:\\DESARROLLOS 2024\\VENTAS FACIL\\NetVentas\\Data\\Implementation\\ItemData.cs",
+              "RelativeToolTip": "Data\\Implementation\\ItemData.cs",
+              "ViewState": "AgIAAIMAAAAAAAAAAAAMwJMAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-10T16:32:27.723Z"
+              "WhenOpened": "2024-12-19T14:16:57.077Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "IUserSerieData.cs",
-              "DocumentMoniker": "E:\\DESARROLLOS 2024\\VENTAS FACIL\\NetVentas\\Data\\Interfaces\\IUserSerieData.cs",
-              "RelativeDocumentMoniker": "Data\\Interfaces\\IUserSerieData.cs",
-              "ToolTip": "E:\\DESARROLLOS 2024\\VENTAS FACIL\\NetVentas\\Data\\Interfaces\\IUserSerieData.cs",
-              "RelativeToolTip": "Data\\Interfaces\\IUserSerieData.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAA/AAAA",
+              "DocumentIndex": 3,
+              "Title": "ItemDTO.cs",
+              "DocumentMoniker": "E:\\DESARROLLOS 2024\\VENTAS FACIL\\NetVentas\\WebApi\\DTOs\\ItemDTO.cs",
+              "RelativeDocumentMoniker": "WebApi\\DTOs\\ItemDTO.cs",
+              "ToolTip": "E:\\DESARROLLOS 2024\\VENTAS FACIL\\NetVentas\\WebApi\\DTOs\\ItemDTO.cs",
+              "RelativeToolTip": "WebApi\\DTOs\\ItemDTO.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAAADMAAABFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-10T16:32:00.387Z"
+              "WhenOpened": "2024-12-19T14:14:09.289Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ItemsController.cs",
+              "DocumentMoniker": "E:\\DESARROLLOS 2024\\VENTAS FACIL\\NetVentas\\WebApi\\Controllers\\ItemsController.cs",
+              "RelativeDocumentMoniker": "WebApi\\Controllers\\ItemsController.cs",
+              "ToolTip": "E:\\DESARROLLOS 2024\\VENTAS FACIL\\NetVentas\\WebApi\\Controllers\\ItemsController.cs",
+              "RelativeToolTip": "WebApi\\Controllers\\ItemsController.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAzwBkAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-19T14:12:44.875Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ItemAlmacenDTO.cs",
+              "DocumentMoniker": "E:\\DESARROLLOS 2024\\VENTAS FACIL\\NetVentas\\WebApi\\DTOs\\Items\\ItemAlmacenDTO.cs",
+              "RelativeDocumentMoniker": "WebApi\\DTOs\\Items\\ItemAlmacenDTO.cs",
+              "ToolTip": "E:\\DESARROLLOS 2024\\VENTAS FACIL\\NetVentas\\WebApi\\DTOs\\Items\\ItemAlmacenDTO.cs",
+              "RelativeToolTip": "WebApi\\DTOs\\Items\\ItemAlmacenDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-19T14:12:20.394Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "UserSerieController.cs",
-              "DocumentMoniker": "E:\\DESARROLLOS 2024\\VENTAS FACIL\\NetVentas\\WebApi\\Controllers\\UserSerieController.cs",
-              "RelativeDocumentMoniker": "WebApi\\Controllers\\UserSerieController.cs",
-              "ToolTip": "E:\\DESARROLLOS 2024\\VENTAS FACIL\\NetVentas\\WebApi\\Controllers\\UserSerieController.cs",
-              "RelativeToolTip": "WebApi\\Controllers\\UserSerieController.cs",
-              "ViewState": "AQIAABAAAAAAAAAAAAAowB4AAAARAAAA",
+              "Title": "ItemVentaDTO.cs",
+              "DocumentMoniker": "E:\\DESARROLLOS 2024\\VENTAS FACIL\\NetVentas\\WebApi\\DTOs\\Items\\ItemVentaDTO.cs",
+              "RelativeDocumentMoniker": "WebApi\\DTOs\\Items\\ItemVentaDTO.cs",
+              "ToolTip": "E:\\DESARROLLOS 2024\\VENTAS FACIL\\NetVentas\\WebApi\\DTOs\\Items\\ItemVentaDTO.cs",
+              "RelativeToolTip": "WebApi\\DTOs\\Items\\ItemVentaDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-10T16:29:24.138Z"
+              "WhenOpened": "2024-12-19T14:12:10.502Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "UserData.cs",
+              "DocumentMoniker": "E:\\DESARROLLOS 2024\\VENTAS FACIL\\NetVentas\\Data\\Implementation\\UserData.cs",
+              "RelativeDocumentMoniker": "Data\\Implementation\\UserData.cs",
+              "ToolTip": "E:\\DESARROLLOS 2024\\VENTAS FACIL\\NetVentas\\Data\\Implementation\\UserData.cs",
+              "RelativeToolTip": "Data\\Implementation\\UserData.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAIAwwCIAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-19T13:47:22.281Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "CompanyData.cs",
+              "DocumentMoniker": "E:\\DESARROLLOS 2024\\VENTAS FACIL\\NetVentas\\Data\\Implementation\\CompanyData.cs",
+              "RelativeDocumentMoniker": "Data\\Implementation\\CompanyData.cs",
+              "ToolTip": "E:\\DESARROLLOS 2024\\VENTAS FACIL\\NetVentas\\Data\\Implementation\\CompanyData.cs",
+              "RelativeToolTip": "Data\\Implementation\\CompanyData.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAYwBUAAABKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-12T00:14:47.413Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "SAPResponse.cs",
+              "DocumentMoniker": "E:\\DESARROLLOS 2024\\VENTAS FACIL\\NetVentas\\Core\\Entities\\SAPResponse.cs",
+              "RelativeDocumentMoniker": "Core\\Entities\\SAPResponse.cs",
+              "ToolTip": "E:\\DESARROLLOS 2024\\VENTAS FACIL\\NetVentas\\Core\\Entities\\SAPResponse.cs",
+              "RelativeToolTip": "Core\\Entities\\SAPResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-12T00:09:25.163Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ItemRepository.cs",
+              "DocumentMoniker": "E:\\DESARROLLOS 2024\\VENTAS FACIL\\NetVentas\\BusinessLogic\\Logic\\ItemRepository.cs",
+              "RelativeDocumentMoniker": "BusinessLogic\\Logic\\ItemRepository.cs",
+              "ToolTip": "E:\\DESARROLLOS 2024\\VENTAS FACIL\\NetVentas\\BusinessLogic\\Logic\\ItemRepository.cs",
+              "RelativeToolTip": "BusinessLogic\\Logic\\ItemRepository.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABEAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-04T23:04:42.381Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "ItemGroupRepository.cs",
+              "DocumentMoniker": "E:\\DESARROLLOS 2024\\VENTAS FACIL\\NetVentas\\BusinessLogic\\Logic\\ItemGroupRepository.cs",
+              "RelativeDocumentMoniker": "BusinessLogic\\Logic\\ItemGroupRepository.cs",
+              "ToolTip": "E:\\DESARROLLOS 2024\\VENTAS FACIL\\NetVentas\\BusinessLogic\\Logic\\ItemGroupRepository.cs",
+              "RelativeToolTip": "BusinessLogic\\Logic\\ItemGroupRepository.cs",
+              "ViewState": "AgIAAEgAAAAAAAAAAAAUwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-04T23:04:35.149Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "DocumentSeriesRepository.cs",
+              "DocumentMoniker": "E:\\DESARROLLOS 2024\\VENTAS FACIL\\NetVentas\\BusinessLogic\\Logic\\DocumentSeriesRepository.cs",
+              "RelativeDocumentMoniker": "BusinessLogic\\Logic\\DocumentSeriesRepository.cs",
+              "ToolTip": "E:\\DESARROLLOS 2024\\VENTAS FACIL\\NetVentas\\BusinessLogic\\Logic\\DocumentSeriesRepository.cs",
+              "RelativeToolTip": "BusinessLogic\\Logic\\DocumentSeriesRepository.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-04T23:04:24.002Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "E:\\DESARROLLOS 2024\\VENTAS FACIL\\NetVentas\\WebApi\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "WebApi\\Controllers\\UserController.cs",
+              "ToolTip": "E:\\DESARROLLOS 2024\\VENTAS FACIL\\NetVentas\\WebApi\\Controllers\\UserController.cs",
+              "RelativeToolTip": "WebApi\\Controllers\\UserController.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAIAxwBsAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-25T19:18:19.97Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "ContactEmployeeRepository.cs",
+              "DocumentMoniker": "E:\\DESARROLLOS 2024\\VENTAS FACIL\\NetVentas\\BusinessLogic\\Logic\\ContactEmployeeRepository.cs",
+              "RelativeDocumentMoniker": "BusinessLogic\\Logic\\ContactEmployeeRepository.cs",
+              "ToolTip": "E:\\DESARROLLOS 2024\\VENTAS FACIL\\NetVentas\\BusinessLogic\\Logic\\ContactEmployeeRepository.cs",
+              "RelativeToolTip": "BusinessLogic\\Logic\\ContactEmployeeRepository.cs",
+              "ViewState": "AgIAADYAAAAAAAAAAAAywAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-04T23:04:20.498Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "E:\\DESARROLLOS 2024\\VENTAS FACIL\\NetVentas\\BusinessLogic\\Logic\\UserRepository.cs",
+              "RelativeDocumentMoniker": "BusinessLogic\\Logic\\UserRepository.cs",
+              "ToolTip": "E:\\DESARROLLOS 2024\\VENTAS FACIL\\NetVentas\\BusinessLogic\\Logic\\UserRepository.cs",
+              "RelativeToolTip": "BusinessLogic\\Logic\\UserRepository.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAywEkAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-31T02:19:57.906Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "CompanyRepository.cs",
+              "DocumentMoniker": "E:\\DESARROLLOS 2024\\VENTAS FACIL\\NetVentas\\BusinessLogic\\Logic\\CompanyRepository.cs",
+              "RelativeDocumentMoniker": "BusinessLogic\\Logic\\CompanyRepository.cs",
+              "ToolTip": "E:\\DESARROLLOS 2024\\VENTAS FACIL\\NetVentas\\BusinessLogic\\Logic\\CompanyRepository.cs",
+              "RelativeToolTip": "BusinessLogic\\Logic\\CompanyRepository.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAmwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-04T23:04:10.457Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "OrderRepository.cs",
+              "DocumentMoniker": "E:\\DESARROLLOS 2024\\VENTAS FACIL\\NetVentas\\BusinessLogic\\Logic\\OrderRepository.cs",
+              "RelativeDocumentMoniker": "BusinessLogic\\Logic\\OrderRepository.cs",
+              "ToolTip": "E:\\DESARROLLOS 2024\\VENTAS FACIL\\NetVentas\\BusinessLogic\\Logic\\OrderRepository.cs",
+              "RelativeToolTip": "BusinessLogic\\Logic\\OrderRepository.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA4AAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-07T02:22:53.325Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "ItemUnidadMedidaRepository.cs",
+              "DocumentMoniker": "E:\\DESARROLLOS 2024\\VENTAS FACIL\\NetVentas\\BusinessLogic\\Logic\\ItemUnidadMedidaRepository.cs",
+              "RelativeDocumentMoniker": "BusinessLogic\\Logic\\ItemUnidadMedidaRepository.cs",
+              "ToolTip": "E:\\DESARROLLOS 2024\\VENTAS FACIL\\NetVentas\\BusinessLogic\\Logic\\ItemUnidadMedidaRepository.cs",
+              "RelativeToolTip": "BusinessLogic\\Logic\\ItemUnidadMedidaRepository.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAywAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-04T23:04:51.479Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "E:\\DESARROLLOS 2024\\VENTAS FACIL\\NetVentas\\WebApi\\appsettings.json",
+              "RelativeDocumentMoniker": "WebApi\\appsettings.json",
+              "ToolTip": "E:\\DESARROLLOS 2024\\VENTAS FACIL\\NetVentas\\WebApi\\appsettings.json",
+              "RelativeToolTip": "WebApi\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-10-25T19:10:04.642Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "PaymentTermsTypesRepository.cs",
+              "DocumentMoniker": "E:\\DESARROLLOS 2024\\VENTAS FACIL\\NetVentas\\BusinessLogic\\Logic\\PaymentTermsTypesRepository.cs",
+              "RelativeDocumentMoniker": "BusinessLogic\\Logic\\PaymentTermsTypesRepository.cs",
+              "ToolTip": "E:\\DESARROLLOS 2024\\VENTAS FACIL\\NetVentas\\BusinessLogic\\Logic\\PaymentTermsTypesRepository.cs",
+              "RelativeToolTip": "BusinessLogic\\Logic\\PaymentTermsTypesRepository.cs",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAUwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-04T23:05:30.455Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "OrderPendingRepository.cs",
+              "DocumentMoniker": "E:\\DESARROLLOS 2024\\VENTAS FACIL\\NetVentas\\BusinessLogic\\Logic\\OrderPendingRepository.cs",
+              "RelativeDocumentMoniker": "BusinessLogic\\Logic\\OrderPendingRepository.cs",
+              "ToolTip": "E:\\DESARROLLOS 2024\\VENTAS FACIL\\NetVentas\\BusinessLogic\\Logic\\OrderPendingRepository.cs",
+              "RelativeToolTip": "BusinessLogic\\Logic\\OrderPendingRepository.cs",
+              "ViewState": "AgIAAG4AAAAAAAAAAAAmwDoAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-20T14:56:55.787Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "BPAdressRepository.cs",
+              "DocumentMoniker": "E:\\DESARROLLOS 2024\\VENTAS FACIL\\NetVentas\\BusinessLogic\\Logic\\BPAdressRepository.cs",
+              "RelativeDocumentMoniker": "BusinessLogic\\Logic\\BPAdressRepository.cs",
+              "ToolTip": "E:\\DESARROLLOS 2024\\VENTAS FACIL\\NetVentas\\BusinessLogic\\Logic\\BPAdressRepository.cs",
+              "RelativeToolTip": "BusinessLogic\\Logic\\BPAdressRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-04T23:04:06.142Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "IOrderRepository.cs",
+              "DocumentMoniker": "E:\\DESARROLLOS 2024\\VENTAS FACIL\\NetVentas\\Core\\Interfaces\\IOrderRepository.cs",
+              "RelativeDocumentMoniker": "Core\\Interfaces\\IOrderRepository.cs",
+              "ToolTip": "E:\\DESARROLLOS 2024\\VENTAS FACIL\\NetVentas\\Core\\Interfaces\\IOrderRepository.cs",
+              "RelativeToolTip": "Core\\Interfaces\\IOrderRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-07T02:29:03.749Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "OrdersController.cs",
+              "DocumentMoniker": "E:\\DESARROLLOS 2024\\VENTAS FACIL\\NetVentas\\WebApi\\Controllers\\OrdersController.cs",
+              "RelativeDocumentMoniker": "WebApi\\Controllers\\OrdersController.cs",
+              "ToolTip": "E:\\DESARROLLOS 2024\\VENTAS FACIL\\NetVentas\\WebApi\\Controllers\\OrdersController.cs",
+              "RelativeToolTip": "WebApi\\Controllers\\OrdersController.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABYAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-25T19:16:10.921Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "BusinessPartnersRepository.cs",
+              "DocumentMoniker": "E:\\DESARROLLOS 2024\\VENTAS FACIL\\NetVentas\\BusinessLogic\\Logic\\BusinessPartnersRepository.cs",
+              "RelativeDocumentMoniker": "BusinessLogic\\Logic\\BusinessPartnersRepository.cs",
+              "ToolTip": "E:\\DESARROLLOS 2024\\VENTAS FACIL\\NetVentas\\BusinessLogic\\Logic\\BusinessPartnersRepository.cs",
+              "RelativeToolTip": "BusinessLogic\\Logic\\BusinessPartnersRepository.cs",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAUwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-25T19:09:21.28Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "SalesPersonController.cs",
+              "DocumentMoniker": "E:\\DESARROLLOS 2024\\VENTAS FACIL\\NetVentas\\WebApi\\Controllers\\SalesPersonController.cs",
+              "RelativeDocumentMoniker": "WebApi\\Controllers\\SalesPersonController.cs",
+              "ToolTip": "E:\\DESARROLLOS 2024\\VENTAS FACIL\\NetVentas\\WebApi\\Controllers\\SalesPersonController.cs",
+              "RelativeToolTip": "WebApi\\Controllers\\SalesPersonController.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABkAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-23T01:32:33.786Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "WeatherForecastController.cs",
+              "DocumentMoniker": "E:\\DESARROLLOS 2024\\VENTAS FACIL\\NetVentas\\WebApi\\Controllers\\WeatherForecastController.cs",
+              "RelativeDocumentMoniker": "WebApi\\Controllers\\WeatherForecastController.cs",
+              "ToolTip": "E:\\DESARROLLOS 2024\\VENTAS FACIL\\NetVentas\\WebApi\\Controllers\\WeatherForecastController.cs",
+              "RelativeToolTip": "WebApi\\Controllers\\WeatherForecastController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-23T01:32:19.968Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "WebApi.csproj",
+              "DocumentMoniker": "E:\\DESARROLLOS 2024\\VENTAS FACIL\\NetVentas\\WebApi\\WebApi.csproj",
+              "RelativeDocumentMoniker": "WebApi\\WebApi.csproj",
+              "ToolTip": "E:\\DESARROLLOS 2024\\VENTAS FACIL\\NetVentas\\WebApi\\WebApi.csproj",
+              "RelativeToolTip": "WebApi\\WebApi.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-10-22T14:40:37.482Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "Data.csproj",
+              "DocumentMoniker": "E:\\DESARROLLOS 2024\\VENTAS FACIL\\NetVentas\\Data\\Data.csproj",
+              "RelativeDocumentMoniker": "Data\\Data.csproj",
+              "ToolTip": "E:\\DESARROLLOS 2024\\VENTAS FACIL\\NetVentas\\Data\\Data.csproj",
+              "RelativeToolTip": "Data\\Data.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-10-22T14:40:02.027Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "Core.csproj",
+              "DocumentMoniker": "E:\\DESARROLLOS 2024\\VENTAS FACIL\\NetVentas\\Core\\Core.csproj",
+              "RelativeDocumentMoniker": "Core\\Core.csproj",
+              "ToolTip": "E:\\DESARROLLOS 2024\\VENTAS FACIL\\NetVentas\\Core\\Core.csproj",
+              "RelativeToolTip": "Core\\Core.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-10-22T14:39:39.971Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "BusinessLogic.csproj",
+              "DocumentMoniker": "E:\\DESARROLLOS 2024\\VENTAS FACIL\\NetVentas\\BusinessLogic\\BusinessLogic.csproj",
+              "RelativeDocumentMoniker": "BusinessLogic\\BusinessLogic.csproj",
+              "ToolTip": "E:\\DESARROLLOS 2024\\VENTAS FACIL\\NetVentas\\BusinessLogic\\BusinessLogic.csproj",
+              "RelativeToolTip": "BusinessLogic\\BusinessLogic.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-10-22T14:37:59.358Z"
             }
           ]
         }

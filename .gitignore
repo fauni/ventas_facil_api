@@ -1,4 +1,11 @@
 # Los binarios de la compilación
+BusinessLogic/bin/
+BusinessLogic/obj/
+Core/bin/
+Core/obj/
+Data/bin/
+Data/obj/
+
 bin/
 obj/
 

@@ -37,7 +37,7 @@ namespace WebApi.Controllers
                     List<ItemDTO> dto = new List<ItemDTO>();
                     foreach (var item in result.Result)
                     {
-                        var infoItemLote = _itemData.GetLotesPorItem(item);
+                        var infoItemLote = item.ManageSerialNumbers == "tNO" ? _itemData.GetLotesPorItem(item) : _itemData.GetNumeroSeriePorItem(item);
                         var resultGrupo = await _itemGroupRepository.GetPorNumero(sessionID, (int)item.ItemsGroupCode);
                         var map = MapeoItem.MapToDTO(item, MapeoItemGroup.MapToDTO(resultGrupo.Result));
                         map.InformacionItemLote = infoItemLote;
